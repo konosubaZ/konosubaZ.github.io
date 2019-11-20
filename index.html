@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>为美好世界献上代码</title>
+    <meta name="keywords" content="前端,jQuery,CSS,HTML,Javascript,动画,漫画,游戏,原创博客"/>
+    <meta name="description" content="撒，游戏开始吧！"/>
+    <meta name="generator" content="emlog"/>
+    <meta itemprop="name" content="为美好世界献上代码 "/>
+    <link rel="icon" href="fonts/icon/icon.jpg" sizes="32x32">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/swiper.css">
+    <link rel="stylesheet" href="css/dman.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/swiper.js"></script>
+    <script src="js/animate.js"></script>
+    <script src="js/jquery.parallax-scroll.js"></script>
+    <script>
+        $(window).scroll(function () {
+            var scrolled = $(this).scrollTop();
+            $('.image').css('top', (0 + (scrolled * .75)) + 'px');
+        });
+        document.onkeydown = function (event) {
+            var e = event || window.event || arguments.callee.caller.arguments[0];
+            if (e && e.keyCode == 27) { // 按 Esc
+                //要做的事情
+                $('.zero-preview').css({'opacity': '0', 'z-index': '0'});
+            }
+            if (e && e.keyCode == 113) { // 按 F2
+                //要做的事情
+            }
+            if (e && e.keyCode == 13) { // enter 键
+                //要做的事情
+            }
+        };
+    </script>
+    <style>
+    </style>
+</head>
+<body id="bg">
+<div id="home">
+    <div class="zero-preview">
+        <div class="zero-box">
+            <img class="zero-img" src="" alt="">
+        </div>
+    </div>
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="blur-bg"></div>
+        <div class="nav-mask"></div>
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#" style="font-size: 18px;font-family: '楷体'">为美好世界献上代码</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">首页 <span class="sr-only">(current)</span></a></li>
+                    <li><a href="#">里世界</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                           aria-haspopup="true" aria-expanded="false">绅士<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">前端</a></li>
+                            <li><a href="#">后端</a></li>
+                            <li><a href="#">代码福利</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">绝对领域</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">友链</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">注册</a></li>
+                    <li><a href="#">登录</a></li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+    <div id="box">
+        <div class="topimg">
+            <div class="image">
+                <div class="swiper-container topimgBanner">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1573934456845&di=688e6f85f08ac33138c8c9f756ae568a&imgtype=0&src=http%3A%2F%2Fpic1.win4000.com%2Fwallpaper%2F2019-01-15%2F5c3dcb956e372.jpg"/>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1573935354177&di=c8875c2ab6d330766793d6a88faa2306&imgtype=0&src=http%3A%2F%2Fpic1.win4000.com%2Fwallpaper%2F2018-06-09%2F5b1b6feec1a15.jpg"
+                                 alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1573975385413&di=fb64f66dd62bb61ed25e845b41cfb4aa&imgtype=0&src=http%3A%2F%2Fwww.005.tv%2Fuploads%2Fallimg%2F170509%2F34-1F509134041126.jpg"
+                                 alt="">
+                        </div>
+                    </div>
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination"></div>
+                </div>
+                <!--http://gf.ppgame.com/CKFinderJava/1/files/033.jpg-->
+            </div>
+        </div>
+        <div class="banner">
+            <div class="swiper-container swiper1">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="slide-img">
+                            <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1573646741860&di=491dda22a64c270f04ce5c4112e603ba&imgtype=0&src=http%3A%2F%2Fimg.qqu.cc%2Fuploads%2Fallimg%2F141214%2F1-141214193000.jpg"
+                                 alt="">
+                            <div class="slide-msg">
+                                <div class="msg-content">
+                                    <h3>好图推荐之：《七龙珠》</h3>
+                                    <p>主要讲述了孙悟空及伙伴们为了寻找能够实现愿望的七颗龙珠，从而踏上冒险的旅途，并在途中以变得更强为信仰勇往直前，突破自我的励志故事。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slide-img">
+                            <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1573646811503&di=71537f9564f43af7ee97df57e8eb76e0&imgtype=0&src=http%3A%2F%2Fimgs.aixifan.com%2Fo_1c8rtop5f1eucs9rghca9k4k4o.jpg"
+                                 alt="">
+                            <div class="slide-msg">
+                                <div class="msg-content">
+                                    <h3>好图推荐之：《我的英雄学院》</h3>
+                                    <p>
+                                        大部分的人类，在这个时代里都拥有名为“个性”的力量，但有力量之人却不一定都属于正义的一方。只要邪恶出现的地方，必定会有英雄挺身而出拯救众人。一名天生没有力量的少年——绿谷出久从小就憧憬一位顶尖英雄，而他的梦想就是成为伟大的英雄，可是，没有力量的他能实现自己的梦想吗？虽然困难重重，少年却依旧不放弃，朝着自己的目标勇往前进！</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slide-img">
+                            <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1574411964&di=3e94014e643cc93763a669eb42f1f77e&imgtype=jpg&er=1&src=http%3A%2F%2Fpic1.win4000.com%2Fwallpaper%2Fd%2F5881a7ae6ac52.jpg"
+                                 alt="">
+                            <div class="slide-msg">
+                                <div class="msg-content">
+                                    <h3>好图推荐之：《海贼王》</h3>
+                                    <p>拥有财富、名声、权力，这世界上的一切的男人
+                                        “海贼王”哥尔·D·罗杰，在被行刑受死之前说了一句话，让全世界的人都涌向了大海。“想要我的宝藏吗？如果想要的话，那就到海上去找吧，我全部都放在那里。”，世界开始迎接“大海贼时代”的来临。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a class="left carousel-control" href="#" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+        <div class="animate-recommend">
+            <div class="title">
+                <h1>不是阿宅不戳进来</h1>
+                <div class="exchange">
+                    <span class="glyphicon glyphicon-refresh"></span>
+                    <span>换一换</span>
+                </div>
+            </div>
+            <div class="recommend-content">
+                <div class="row">
+                    <div class="col-md-3 col-xs-6">
+                        <div class="recommend-item">
+                            <div class="recommend-item-cover">
+                                <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1573815825506&di=3b0bd0a3a60dd388a0b27eb4bd421da5&imgtype=0&src=http%3A%2F%2Fn.sinaimg.cn%2Fsinacn20100%2F600%2Fw1920h1080%2F20191017%2Fc37b-ifzxhxm4654855.jpg"
+                                     alt="">
+                            </div>
+                            <div class="recommend-item-msg">
+                                <h3>【10月】动物狂想曲 / BEASTARS</h3>
+                                <div class="recommend-table">
+                                    <div class="table-item">
+                                        <span class="glyphicon glyphicon-play-circle"></span>
+                                        <p>25255</p>
+                                    </div>
+                                    <div class="table-item">
+                                        <span class="glyphicon glyphicon-list-alt"></span>
+                                        <p>25255</p>
+                                    </div>
+                                    <div class="table-item">
+                                        <span class="glyphicon glyphicon-phone"></span>
+                                        <p>25255</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-xs-6">
+                        <div class="recommend-item">
+                            <div class="recommend-item-cover">
+                                <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1574394645&di=40a276a38b36cb8afb29cc8a7b99a512&imgtype=jpg&er=1&src=http%3A%2F%2Fi0.hdslb.com%2Fbfs%2Farticle%2F3ea0e2347f335c1fce2aead11dfbaaa5133bd894.jpg"
+                                     alt="">
+                            </div>
+                            <div class="recommend-item-msg">
+                                <h3>【10月】刀剑神域 爱丽丝篇 异界战争</h3>
+                                <div class="recommend-table">
+                                    <div class="table-item">
+                                        <span class="glyphicon glyphicon-play-circle"></span>
+                                        <p>25255</p>
+                                    </div>
+                                    <div class="table-item">
+                                        <span class="glyphicon glyphicon-list-alt"></span>
+                                        <p>25255</p>
+                                    </div>
+                                    <div class="table-item">
+                                        <span class="glyphicon glyphicon-phone"></span>
+                                        <p>25255</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-xs-6">
+                        <div class="recommend-item">
+                            <div class="recommend-item-cover">
+                                <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1573800010248&di=5981f7af58417d67ccb76ae65558e994&imgtype=0&src=http%3A%2F%2Fwww.005.tv%2Fuploads%2Fallimg%2F181007%2F48-1Q00H1530cL.jpg"
+                                     alt="">
+                            </div>
+                            <div class="recommend-item-msg">
+                                <h3>【10月】 喜欢本大爷的竟然就你一个？</h3>
+                                <div class="recommend-table">
+                                    <div class="table-item">
+                                        <span class="glyphicon glyphicon-play-circle"></span>
+                                        <p>25255</p>
+                                    </div>
+                                    <div class="table-item">
+                                        <span class="glyphicon glyphicon-list-alt"></span>
+                                        <p>25255</p>
+                                    </div>
+                                    <div class="table-item">
+                                        <span class="glyphicon glyphicon-phone"></span>
+                                        <p>25255</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-xs-6">
+                        <div class="recommend-item">
+                            <div class="recommend-item-cover">
+                                <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1573800284917&di=0419d1c0dd547169d5de2196648f09fd&imgtype=0&src=http%3A%2F%2Fi0.hdslb.com%2Fbfs%2Farticle%2F83c587702bec55f6125344411f0b809e5f0f7718.jpg"
+                                     alt="">
+                            </div>
+                            <div class="recommend-item-msg">
+                                <h3>【10月】我的英雄学院 第四季</h3>
+                                <div class="recommend-table">
+                                    <div class="table-item">
+                                        <span class="glyphicon glyphicon-play-circle"></span>
+                                        <p>25255</p>
+                                    </div>
+                                    <div class="table-item">
+                                        <span class="glyphicon glyphicon-list-alt"></span>
+                                        <p>25255</p>
+                                    </div>
+                                    <div class="table-item">
+                                        <span class="glyphicon glyphicon-phone"></span>
+                                        <p>25255</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-xs-6">
+                        <div class="recommend-item">
+                            <div class="recommend-item-cover">
+                                <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1573815576479&di=be228ebe135dbc91944e3ae428504a84&imgtype=0&src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fq_70%2Cc_zoom%2Cw_640%2Fimages%2F20191108%2Ff1636b50ec944c889a230c2c5a5f837e.gif"
+                                     alt="">
+                            </div>
+                            <div class="recommend-item-msg">
+                                <h3>【10月】这个勇者明明超强却过分慎重</h3>
+                                <div class="recommend-table">
+                                    <div class="table-item">
+                                        <span class="glyphicon glyphicon-play-circle"></span>
+                                        <p>25255</p>
+                                    </div>
+                                    <div class="table-item">
+                                        <span class="glyphicon glyphicon-list-alt"></span>
+                                        <p>25255</p>
+                                    </div>
+                                    <div class="table-item">
+                                        <span class="glyphicon glyphicon-phone"></span>
+                                        <p>25255</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-xs-6">
+                        <div class="recommend-item">
+                            <div class="recommend-item-cover">
+                                <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1573815638891&di=b19850526352eb6a23061ac6d03569cc&imgtype=0&src=http%3A%2F%2Fi0.hdslb.com%2Fbfs%2Farchive%2F91dc423b1b0af912d71455fdd133d86be0964c1b.jpg"
+                                     alt="">
+                            </div>
+                            <div class="recommend-item-msg">
+                                <h3>【10月】Ｄｒ．ＳＴＯＮＥ 石纪元</h3>
+                                <div class="recommend-table">
+                                    <div class="table-item">
+                                        <span class="glyphicon glyphicon-play-circle"></span>
+                                        <p>25255</p>
+                                    </div>
+                                    <div class="table-item">
+                                        <span class="glyphicon glyphicon-list-alt"></span>
+                                        <p>25255</p>
+                                    </div>
+                                    <div class="table-item">
+                                        <span class="glyphicon glyphicon-phone"></span>
+                                        <p>25255</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-xs-6">
+                        <div class="recommend-item">
+                            <div class="recommend-item-cover">
+                                <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1573815758386&di=38ec753eb02fc8d94a37e2989cb07eea&imgtype=0&src=http%3A%2F%2Fi0.hdslb.com%2Fbfs%2Farticle%2Fa0a76f43f4f884e5f7321c28ad0d9883e26dc44f.jpg"
+                                     alt="">
+                            </div>
+                            <div class="recommend-item-msg">
+                                <h3>【10月】命运-冠位指定 绝对魔兽战线 巴比伦尼亚</h3>
+                                <div class="recommend-table">
+                                    <div class="table-item">
+                                        <span class="glyphicon glyphicon-play-circle"></span>
+                                        <p>25255</p>
+                                    </div>
+                                    <div class="table-item">
+                                        <span class="glyphicon glyphicon-list-alt"></span>
+                                        <p>25255</p>
+                                    </div>
+                                    <div class="table-item">
+                                        <span class="glyphicon glyphicon-phone"></span>
+                                        <p>25255</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-xs-6">
+                        <div class="recommend-item">
+                            <div class="recommend-item-cover">
+                                <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1573815716864&di=db3109151c242ff43cf1a599c125bbc6&imgtype=0&src=http%3A%2F%2Finews.gtimg.com%2Fnewsapp_match%2F0%2F10648550414%2F0.jpg"
+                                     alt="">
+                            </div>
+                            <div class="recommend-item-msg">
+                                <h3>【10月】我，不是说了能力要平均值么！</h3>
+                                <div class="recommend-table">
+                                    <div class="table-item">
+                                        <span class="glyphicon glyphicon-play-circle"></span>
+                                        <p>25255</p>
+                                    </div>
+                                    <div class="table-item">
+                                        <span class="glyphicon glyphicon-list-alt"></span>
+                                        <p>25255</p>
+                                    </div>
+                                    <div class="table-item">
+                                        <span class="glyphicon glyphicon-phone"></span>
+                                        <p>25255</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="recent-news">
+            <div class="title">
+                <h1>不是阿宅不看过来</h1>
+            </div>
+            <div class="news-box">
+                <div class="news-item">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="news-item-cover">
+                                <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1573985513752&di=e041d2e9a6f6c954de2d17a9d054b86c&imgtype=0&src=http%3A%2F%2Fi0.hdslb.com%2Fbfs%2Farchive%2F0e8c7fbf3b80d04eebcb7b308c8f7ce1336a4534.jpg"
+                                     alt="">
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="news-item-msg">
+                                <p class="clearfix-title">1月6日开始播出动画《室内露营△》主宣图公开！</p>
+                                <div class="tags">
+                                    <span><a href="javascript:;">2019/11/17</a></span>
+                                    <span><a href="javascript:;">发布者：未末</a></span>
+                                    <span><a href="javascript:;">类型：动漫</a></span>
+                                </div>
+                                <div class="details">
+                                    <p>根据あfろ原作制作的TV动画《室内露营△》公开了主宣传图，本作预计将于2020年1月6日开始在AT-X、TOKYO MX、BS11电视台播出。</p>
+                                </div>
+                                <div class="more-btn">
+                                    <a href="javascript:;">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="news-item">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="news-item-cover">
+                                <img src="https://images.dmzj.com/resource/news/2019/11/17/1573988370865216.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="news-item-msg">
+                                <p class="clearfix-title">Fate剧场版天之杯第3章春之歌最新预告CM 黑樱登场</p>
+                                <div class="tags">
+                                    <span><a href="javascript:;">2019/11/17</a></span>
+                                    <span><a href="javascript:;">发布者：未末</a></span>
+                                    <span><a href="javascript:;">类型：动漫</a></span>
+                                </div>
+                                <div class="details">
+                                    <p>剧场版动画「『Fate/stay night [Heaven's Feel]』III.spring song」近日公开了最新的预告CM，一起来看看吧。</p>
+                                </div>
+                                <div class="more-btn">
+                                    <a href="javascript:;">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="news-item">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="news-item-cover">
+                                <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1573985513752&di=e041d2e9a6f6c954de2d17a9d054b86c&imgtype=0&src=http%3A%2F%2Fi0.hdslb.com%2Fbfs%2Farchive%2F0e8c7fbf3b80d04eebcb7b308c8f7ce1336a4534.jpg"
+                                     alt="">
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="news-item-msg">
+                                <p class="clearfix-title">1月6日开始播出动画《室内露营△》主宣图公开！</p>
+                                <div class="tags">
+                                    <span><a href="javascript:;">2019/11/17</a></span>
+                                    <span><a href="javascript:;">发布者：未末</a></span>
+                                    <span><a href="javascript:;">类型：动漫</a></span>
+                                </div>
+                                <div class="details">
+                                    <p>根据あfろ原作制作的TV动画《室内露营△》公开了主宣传图，本作预计将于2020年1月6日开始在AT-X、TOKYO MX、BS11电视台播出。</p>
+                                </div>
+                                <div class="more-btn">
+                                    <a href="javascript:;">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="news-item">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="news-item-cover">
+                                <img src="https://images.dmzj.com/resource/news/2019/11/17/1573988370865216.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="news-item-msg">
+                                <p class="clearfix-title">Fate剧场版天之杯第3章春之歌最新预告CM 黑樱登场</p>
+                                <div class="tags">
+                                    <span><a href="javascript:;">2019/11/17</a></span>
+                                    <span><a href="javascript:;">发布者：未末</a></span>
+                                    <span><a href="javascript:;">类型：动漫</a></span>
+                                </div>
+                                <div class="details">
+                                    <p>剧场版动画「『Fate/stay night [Heaven's Feel]』III.spring song」近日公开了最新的预告CM，一起来看看吧。</p>
+                                </div>
+                                <div class="more-btn">
+                                    <a href="javascript:;">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="news-item">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="news-item-cover">
+                                <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1573985513752&di=e041d2e9a6f6c954de2d17a9d054b86c&imgtype=0&src=http%3A%2F%2Fi0.hdslb.com%2Fbfs%2Farchive%2F0e8c7fbf3b80d04eebcb7b308c8f7ce1336a4534.jpg"
+                                     alt="">
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="news-item-msg">
+                                <p class="clearfix-title">1月6日开始播出动画《室内露营△》主宣图公开！</p>
+                                <div class="tags">
+                                    <span><a href="javascript:;">2019/11/17</a></span>
+                                    <span><a href="javascript:;">发布者：未末</a></span>
+                                    <span><a href="javascript:;">类型：动漫</a></span>
+                                </div>
+                                <div class="details">
+                                    <p>根据あfろ原作制作的TV动画《室内露营△》公开了主宣传图，本作预计将于2020年1月6日开始在AT-X、TOKYO MX、BS11电视台播出。</p>
+                                </div>
+                                <div class="more-btn">
+                                    <a href="javascript:;">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="news-item">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="news-item-cover">
+                                <img src="https://images.dmzj.com/resource/news/2019/11/17/1573988370865216.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="news-item-msg">
+                                <p class="clearfix-title">Fate剧场版天之杯第3章春之歌最新预告CM 黑樱登场</p>
+                                <div class="tags">
+                                    <span><a href="javascript:;">2019/11/17</a></span>
+                                    <span><a href="javascript:;">发布者：未末</a></span>
+                                    <span><a href="javascript:;">类型：动漫</a></span>
+                                </div>
+                                <div class="details">
+                                    <p>剧场版动画「『Fate/stay night [Heaven's Feel]』III.spring song」近日公开了最新的预告CM，一起来看看吧。</p>
+                                </div>
+                                <div class="more-btn">
+                                    <a href="javascript:;">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="news-item">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="news-item-cover">
+                                <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1573985513752&di=e041d2e9a6f6c954de2d17a9d054b86c&imgtype=0&src=http%3A%2F%2Fi0.hdslb.com%2Fbfs%2Farchive%2F0e8c7fbf3b80d04eebcb7b308c8f7ce1336a4534.jpg"
+                                     alt="">
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="news-item-msg">
+                                <p class="clearfix-title">1月6日开始播出动画《室内露营△》主宣图公开！</p>
+                                <div class="tags">
+                                    <span><a href="javascript:;">2019/11/17</a></span>
+                                    <span><a href="javascript:;">发布者：未末</a></span>
+                                    <span><a href="javascript:;">类型：动漫</a></span>
+                                </div>
+                                <div class="details">
+                                    <p>根据あfろ原作制作的TV动画《室内露营△》公开了主宣传图，本作预计将于2020年1月6日开始在AT-X、TOKYO MX、BS11电视台播出。</p>
+                                </div>
+                                <div class="more-btn">
+                                    <a href="javascript:;">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="news-item">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="news-item-cover">
+                                <img src="https://images.dmzj.com/resource/news/2019/11/17/1573988370865216.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="news-item-msg">
+                                <p class="clearfix-title">Fate剧场版天之杯第3章春之歌最新预告CM 黑樱登场</p>
+                                <div class="tags">
+                                    <span><a href="javascript:;">2019/11/17</a></span>
+                                    <span><a href="javascript:;">发布者：未末</a></span>
+                                    <span><a href="javascript:;">类型：动漫</a></span>
+                                </div>
+                                <div class="details">
+                                    <p>剧场版动画「『Fate/stay night [Heaven's Feel]』III.spring song」近日公开了最新的预告CM，一起来看看吧。</p>
+                                </div>
+                                <div class="more-btn">
+                                    <a href="javascript:;">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="news-item">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="news-item-cover">
+                                <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1573985513752&di=e041d2e9a6f6c954de2d17a9d054b86c&imgtype=0&src=http%3A%2F%2Fi0.hdslb.com%2Fbfs%2Farchive%2F0e8c7fbf3b80d04eebcb7b308c8f7ce1336a4534.jpg"
+                                     alt="">
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="news-item-msg">
+                                <p class="clearfix-title">1月6日开始播出动画《室内露营△》主宣图公开！</p>
+                                <div class="tags">
+                                    <span><a href="javascript:;">2019/11/17</a></span>
+                                    <span><a href="javascript:;">发布者：未末</a></span>
+                                    <span><a href="javascript:;">类型：动漫</a></span>
+                                </div>
+                                <div class="details">
+                                    <p>根据あfろ原作制作的TV动画《室内露营△》公开了主宣传图，本作预计将于2020年1月6日开始在AT-X、TOKYO MX、BS11电视台播出。</p>
+                                </div>
+                                <div class="more-btn">
+                                    <a href="javascript:;">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="news-item">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="news-item-cover">
+                                <img src="https://images.dmzj.com/resource/news/2019/11/17/1573988370865216.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="news-item-msg">
+                                <p class="clearfix-title">Fate剧场版天之杯第3章春之歌最新预告CM 黑樱登场</p>
+                                <div class="tags">
+                                    <span><a href="javascript:;">2019/11/17</a></span>
+                                    <span><a href="javascript:;">发布者：未末</a></span>
+                                    <span><a href="javascript:;">类型：动漫</a></span>
+                                </div>
+                                <div class="details">
+                                    <p>剧场版动画「『Fate/stay night [Heaven's Feel]』III.spring song」近日公开了最新的预告CM，一起来看看吧。</p>
+                                </div>
+                                <div class="more-btn">
+                                    <a href="javascript:;">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <nav aria-label="Page navigation">
+                <ul class="pagination">
+                    <li>
+                        <a href="#" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </li>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li>
+                        <a href="#" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div id="foot">
+
+    </div>
+</div>
+</body>
+</html>
