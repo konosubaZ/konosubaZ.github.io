@@ -43,33 +43,34 @@ html {
 /*-------zero-preview----------*/
 
 #bg {
-
     font-family: mFont;
     /*http://gf.ppgame.com/CKFinderJava/1/files/033.jpg*/
     /*background-image: url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1564512131219&di=5d824364ab5a9f84971b6c3410c58801&imgtype=0&src=http%3A%2F%2Fi0.hdslb.com%2Fbfs%2Farticle%2Fb0fdb8c99e90edaa85edaa84349909c472501c45.png);*/
-    background-image: url("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1573935603469&di=c53a269e8cf0e7fbbd66529bf12414ce&imgtype=0&src=http%3A%2F%2Fpic1.win4000.com%2Fwallpaper%2F2018-11-13%2F5bea75b424a58.jpg");
+    /*background-image: url("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1573935603469&di=c53a269e8cf0e7fbbd66529bf12414ce&imgtype=0&src=http%3A%2F%2Fpic1.win4000.com%2Fwallpaper%2F2018-11-13%2F5bea75b424a58.jpg");*/
+    background-image: url("https://images6.alphacoders.com/782/thumb-1920-782941.png");
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: center;
     background-attachment: fixed;
-    background-size: cover;
+    background-size: 100% 100%;
+}
+
+@media screen and (max-width: 768px) {
+    #bg {
+        background-size: cover !important;
+    }
 }
 
 #box {
     position: relative;
     max-width: 1160px;
     margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.3);
 }
 
 .no-padding {
     padding: 0 !important;
 }
 
-@media screen and (max-width: 768px) {
-
-    #bg {
-        background-size: 100% 100%;
-    }
-}
 
 @font-face {
     font-family: mFont;
@@ -141,12 +142,6 @@ b {
     transition: .3s all;
 }
 
-#box {
-    width: 100%;
-    height: auto;
-    background-color: rgba(255, 255, 255, 0.3);
-}
-
 .tr {
     text-align: right;
 }
@@ -160,24 +155,50 @@ b {
     width: 100%;
 }
 
+.title .title-icon {
+    display: inline-block;
+    width: 40px;
+    height: 30px;
+    vertical-align: bottom;
+    background-size: cover;
+}
+
+.icon_o {
+    background: url("../fonts/icon_oo.png") no-repeat center;
+}
+
+.icon_t {
+    background: url("../fonts/icon_t.png") no-repeat center;
+}
+
 .title h1 {
     display: inline-block;
     font-size: 25px;
-    color: white !important;
-    padding-top: 20px;
+    color: black !important;
     text-align: left;
     margin: 0;
 }
 
 /*-------------nav---------*/
+.navbar-default {
+    /*background-image: url("https://images5.alphacoders.com/810/thumb-1920-810810.jpg");*/
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 100% 45%;
+}
+
+.nav-bg {
+    background-image: url("https://images5.alphacoders.com/810/thumb-1920-810810.jpg");
+}
+
 .navbar-header button {
     border: none;
     outline: none;
 }
 
 
-.navbar-default .dropdown-menu a{
-    color: #000!important;
+.navbar-default .dropdown-menu a {
+    color: #000 !important;
 }
 
 .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
@@ -222,8 +243,13 @@ b {
     .navbar-brand {
         padding: 15px 10px;
     }
-    .navbar-default .dropdown-menu a{
-        color: #fff!important;
+
+    .navbar-default .dropdown-menu a {
+        color: #fff !important;
+    }
+
+    .navbar-default {
+        background-image: url("https://images5.alphacoders.com/810/thumb-1920-810810.jpg") !important;
     }
 }
 
@@ -232,7 +258,7 @@ b {
 .topimg {
     position: relative;
     width: 100%;
-    height: 550px;
+    height: 320px;
     margin: 0 auto;
     /*background-image: url("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1564679035480&di=95d2e5b3d06f1615d5d86cb0041ec267&imgtype=0&src=http%3A%2F%2Fi0.hdslb.com%2Fbfs%2Farticle%2F255ed6552e0f35ed327efa1fba3d7d7583136cdd.jpg");*/
     overflow: hidden;
@@ -247,35 +273,9 @@ b {
     /*pointer-events: none;*/
 }
 
-.topimg .image .swiper-container {
-    width: 100%;
-    height: 100%;
-}
-
-.topimg .image .swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    background: #fff;
-
-    /* Center slide text vertically */
-    /*display: -webkit-box;*/
-    /*display: -ms-flexbox;*/
-    /*display: -webkit-flex;*/
-    /*display: flex;*/
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    -webkit-justify-content: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    -webkit-align-items: center;
-    align-items: center;
-}
-
 .topimg .image img {
     width: 100%;
-    height: 550px;
-    transition: .5s all;
+    height: 320px;
 }
 
 @media screen and (max-width: 768px) {
@@ -290,6 +290,7 @@ b {
     width: 100%;
     height: auto;
     overflow: hidden;
+    margin-bottom: 40px;
 }
 
 .banner > .swiper-container {
@@ -330,7 +331,7 @@ b {
 
 .slide-img img {
     width: 100%;
-    min-height: 150px !important;
+    height: 160px !important;
     transition: .3s all ease;
 }
 
@@ -344,39 +345,6 @@ b {
     opacity: 0;
     text-align: center;
     background-color: rgba(0, 0, 0, 0.3);
-}
-
-.slide-msg p {
-    font-size: 14px;
-    text-align: left;
-    width: 90%;
-    margin: 0 auto;
-    line-height: 20px;
-}
-
-.slide-msg .msg-content {
-    position: absolute;
-    top: 20%;
-    left: 0;
-}
-
-.msg-content h3 {
-    font-size: 20px;
-    color: white;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 1;
-    -webkit-box-orient: vertical;
-}
-
-.slide-msg .msg-content p {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 5;
-    -webkit-box-orient: vertical;
-    color: white;
 }
 
 .carousel-control {
@@ -559,14 +527,14 @@ b {
     padding: 0 30px;
     width: 100%;
     height: auto;
+    margin-bottom: 40px;
 }
 
 .animate-recommend .title .exchange {
     display: inline-block;
     float: right;
     cursor: pointer;
-    padding-top: 20px;
-    color: white;
+    color: black;
 }
 
 .animate-recommend .title .exchange span {
@@ -574,7 +542,6 @@ b {
     vertical-align: top;
     font-size: 14px;
     margin-right: 5px;
-    font-weight: bolder;
 }
 
 .animate-recommend .title .exchange span.xuanz {
@@ -597,12 +564,12 @@ b {
     width: 100%;
     height: 180px;
     background-color: white;
-    margin-top: 20px;
     border-top-left-radius: .25rem;
     border-top-right-radius: .25rem;
     overflow: hidden;
     cursor: pointer;
     transition: .3s all ease;
+    margin-top: 20px;
 }
 
 .recommend-item .recommend-item-cover {
@@ -715,11 +682,68 @@ b {
 
 /*-------------animate-recommend----------*/
 
+/*--------code-study---------*/
+.code-study {
+    position: relative;
+    width: 100%;
+    height: 550px;
+    /*background-image: url("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1574278217526&di=9d4aefb8730154d5c8c3528b6dcf4e19&imgtype=0&src=http%3A%2F%2Fpic1.win4000.com%2Fwallpaper%2F2018-06-01%2F5b10e086264e3.jpg");*/
+    /*background-image: url("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1574278905621&di=0124e58574ac28ecb1d37175417408de&imgtype=0&src=http%3A%2F%2Fi557com-1251420446.picgz.myqcloud.com%2Fwp-content%2Fuploads%2F2018%2F07%2F1532424295.png%3FimageMogr2%2Finterlace%2F1%2Fcrop%2F1920x1080");*/
+    /*background-image: url("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1574278963485&di=b27fb2e9ace2b5fb96cb672c5965b15a&imgtype=0&src=http%3A%2F%2Fi0.hdslb.com%2Fbfs%2Farticle%2Fdf7f1c28d68c8d9b1701adbdc1c72db2dc0c6e62.jpg");*/
+    background-image: url("https://pic.rmb.bdstatic.com/43ec4f3ec58c83b8f082c81720387613.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    margin-bottom: 40px;
+}
+
+.code-study .info {
+    width: 100%;
+    padding: 80px 30px;
+    height: 500px;
+}
+
+.code-study h2 {
+    text-align: center;
+    font-size: 5rem;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+}
+
+
+/*--------code-study---------*/
+
 /*---------------foot---------------*/
 #foot {
     width: 100%;
     height: 80px;
-    background: rgba(0,0,0,.2);
+    background: rgba(0, 0, 0, .2);
+}
+
+
+#foot .landlord img:nth-child(1) {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 350px;
+    height: auto;
+}
+
+#foot .landlord img:nth-child(2) {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 350px;
+    height: auto;
+    transform: rotateY(180deg);
+}
+
+@media screen and (max-width: 768px) {
+    #foot .landlord {
+        display: none;
+    }
 }
 
 /*---------------foot---------------*/

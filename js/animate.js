@@ -1,13 +1,4 @@
 $(document).ready(function () {
-    var topimg = new Swiper('.topimgBanner', {
-        autoplay: true,
-        effect: 'cube',
-        loop: true,
-        pagination: {
-            el: '.swiper-pagination',
-            dynamicBullets: true,
-        },
-    });
     var swiper1 = new Swiper('.swiper1', {
         slidesPerView: 3.5,
         autoplay: true,
@@ -53,18 +44,15 @@ $(document).ready(function () {
         $('.zero-preview').css({'opacity': '1', 'z-index': '99999'});
         $('.zero-preview').find('img').attr('src', imgSrc);
     });
-
     bannerAnimate();
 
     function bannerAnimate() {
         $('.banner').find('.swiper-slide').hover(function () {
             $(this).find('.slide-msg').stop().animate({opacity: 1});
             $(this).find('img').stop().css('transform', 'scale(1.2)').css('filter', 'blur(5px)');
-            $(this).find('.msg-content').stop().animate({top: 0}, 250).css('display', 'block');
         }, function () {
             $(this).find('.slide-msg').stop().animate({opacity: 0});
             $(this).find('img').stop().css('transform', 'scale(1)').css('filter', 'blur(0)');
-            $(this).find('.msg-content').stop().animate({top: '20%'}).css('display', 'none');
         })
     }
 

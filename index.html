@@ -5,7 +5,7 @@
           content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>为美好世界献上代码</title>
     <meta name="keywords" content="前端,jQuery,CSS,HTML,Javascript,动画,漫画,游戏,原创博客"/>
-    <meta name="description" content="撒，游戏开始吧！"/>
+    <meta name="description" content="Konisuba！"/>
     <meta name="generator" content="emlog"/>
     <meta itemprop="name" content="为美好世界献上代码 "/>
     <link rel="icon" href="fonts/icon/icon.jpg" sizes="32x32">
@@ -22,6 +22,11 @@
         $(window).scroll(function () {
             var scrolled = $(this).scrollTop();
             $('.image').css('top', (0 + (scrolled * .75)) + 'px');
+            if (scrolled >= 320) {
+                $('.navbar-default').addClass('nav-bg');
+            } else {
+                $('.navbar-default').removeClass('nav-bg');
+            }
         });
         document.onkeydown = function (event) {
             var e = event || window.event || arguments.callee.caller.arguments[0];
@@ -60,7 +65,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#" style="font-size: 18px;font-family: '楷体'">为美好世界献上代码</a>
+                <a class="navbar-brand" href="#" style="font-size: 18px;font-family: '楷体'">Konisuba</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -88,67 +93,41 @@
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
     </nav>
+
     <div id="box">
         <div class="topimg">
             <div class="image">
-                <div class="swiper-container topimgBanner">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1573934456845&di=688e6f85f08ac33138c8c9f756ae568a&imgtype=0&src=http%3A%2F%2Fpic1.win4000.com%2Fwallpaper%2F2019-01-15%2F5c3dcb956e372.jpg"/>
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1573935354177&di=c8875c2ab6d330766793d6a88faa2306&imgtype=0&src=http%3A%2F%2Fpic1.win4000.com%2Fwallpaper%2F2018-06-09%2F5b1b6feec1a15.jpg"
-                                 alt="">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1573975385413&di=fb64f66dd62bb61ed25e845b41cfb4aa&imgtype=0&src=http%3A%2F%2Fwww.005.tv%2Fuploads%2Fallimg%2F170509%2F34-1F509134041126.jpg"
-                                 alt="">
-                        </div>
-                    </div>
-                    <!-- Add Pagination -->
-                    <div class="swiper-pagination"></div>
-                </div>
-                <!--http://gf.ppgame.com/CKFinderJava/1/files/033.jpg-->
+                <img src="https://coverfiles.alphacoders.com/498/49851.jpg" alt="">
             </div>
         </div>
+
         <div class="banner">
             <div class="swiper-container swiper1">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <div class="slide-img">
-                            <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1573646741860&di=491dda22a64c270f04ce5c4112e603ba&imgtype=0&src=http%3A%2F%2Fimg.qqu.cc%2Fuploads%2Fallimg%2F141214%2F1-141214193000.jpg"
-                                 alt="">
+                            <!--                            <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1573646741860&di=491dda22a64c270f04ce5c4112e603ba&imgtype=0&src=http%3A%2F%2Fimg.qqu.cc%2Fuploads%2Fallimg%2F141214%2F1-141214193000.jpg"-->
+                            <!--                                 alt="">-->
+                            <img src="https://images8.alphacoders.com/806/thumb-1920-806226.png" alt="">
                             <div class="slide-msg">
-                                <div class="msg-content">
-                                    <h3>好图推荐之：《七龙珠》</h3>
-                                    <p>主要讲述了孙悟空及伙伴们为了寻找能够实现愿望的七颗龙珠，从而踏上冒险的旅途，并在途中以变得更强为信仰勇往直前，突破自我的励志故事。</p>
-                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="slide-img">
-                            <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1573646811503&di=71537f9564f43af7ee97df57e8eb76e0&imgtype=0&src=http%3A%2F%2Fimgs.aixifan.com%2Fo_1c8rtop5f1eucs9rghca9k4k4o.jpg"
-                                 alt="">
+                            <!--                            <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1573646811503&di=71537f9564f43af7ee97df57e8eb76e0&imgtype=0&src=http%3A%2F%2Fimgs.aixifan.com%2Fo_1c8rtop5f1eucs9rghca9k4k4o.jpg"-->
+                            <!--                                 alt="">-->
+                            <img src="https://images8.alphacoders.com/782/thumb-1920-782990.png" alt="">
                             <div class="slide-msg">
-                                <div class="msg-content">
-                                    <h3>好图推荐之：《我的英雄学院》</h3>
-                                    <p>
-                                        大部分的人类，在这个时代里都拥有名为“个性”的力量，但有力量之人却不一定都属于正义的一方。只要邪恶出现的地方，必定会有英雄挺身而出拯救众人。一名天生没有力量的少年——绿谷出久从小就憧憬一位顶尖英雄，而他的梦想就是成为伟大的英雄，可是，没有力量的他能实现自己的梦想吗？虽然困难重重，少年却依旧不放弃，朝着自己的目标勇往前进！</p>
-                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="slide-img">
-                            <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1574411964&di=3e94014e643cc93763a669eb42f1f77e&imgtype=jpg&er=1&src=http%3A%2F%2Fpic1.win4000.com%2Fwallpaper%2Fd%2F5881a7ae6ac52.jpg"
-                                 alt="">
+                            <!--                            <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1574411964&di=3e94014e643cc93763a669eb42f1f77e&imgtype=jpg&er=1&src=http%3A%2F%2Fpic1.win4000.com%2Fwallpaper%2Fd%2F5881a7ae6ac52.jpg"-->
+                            <!--                                 alt="">-->
+                            <img src="https://images.alphacoders.com/813/thumb-1920-813837.jpg" alt="">
                             <div class="slide-msg">
-                                <div class="msg-content">
-                                    <h3>好图推荐之：《海贼王》</h3>
-                                    <p>拥有财富、名声、权力，这世界上的一切的男人
-                                        “海贼王”哥尔·D·罗杰，在被行刑受死之前说了一句话，让全世界的人都涌向了大海。“想要我的宝藏吗？如果想要的话，那就到海上去找吧，我全部都放在那里。”，世界开始迎接“大海贼时代”的来临。</p>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -165,6 +144,7 @@
         </div>
         <div class="animate-recommend">
             <div class="title">
+                <span class="title-icon icon_o"></span>
                 <h1>不是阿宅不戳进来</h1>
                 <div class="exchange">
                     <span class="glyphicon glyphicon-refresh"></span>
@@ -378,6 +358,7 @@
         </div>
         <div class="recent-news">
             <div class="title">
+                <span class="title-icon icon_t"></span>
                 <h1>不是阿宅不看过来</h1>
             </div>
             <div class="news-box">
@@ -660,7 +641,10 @@
         </div>
     </div>
     <div id="foot">
-
+        <div class="landlord">
+            <img src="fonts/akuyae.png" alt="">
+            <img src="fonts/icon_s.png" alt="">
+        </div>
     </div>
 </div>
 </body>
