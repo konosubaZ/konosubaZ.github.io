@@ -1,0 +1,11 @@
+bannerData(
+    [
+        "https://images8.alphacoders.com/806/thumb-1920-806226.png",
+        "https://images8.alphacoders.com/782/thumb-1920-782990.png",
+        "https://images.alphacoders.com/813/thumb-1920-813837.jpg",
+        "https://images5.alphacoders.com/104/thumb-1920-1042667.jpg",
+        "https://images3.alphacoders.com/704/thumb-1920-704387.png",
+        "https://images7.alphacoders.com/915/thumb-1920-915653.jpg",
+        "https://images3.alphacoders.com/782/thumb-1920-782970.png"
+    ]
+);
