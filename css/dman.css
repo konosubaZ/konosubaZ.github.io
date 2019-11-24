@@ -8,7 +8,8 @@ html {
 }
 
 .active {
-    background-color: rgba(0, 0, 0, 0.1) !important;
+    color: #000;
+    background-color: hotpink;
 }
 
 /*-------zero-preview----------*/
@@ -79,14 +80,63 @@ html {
     src: url('../fonts/avqest.ttf');
 }
 
+
+b {
+    color: white;
+    transition: .3s all;
+}
+
+.tr {
+    text-align: right;
+}
+
+.tl {
+    text-align: left;
+}
+
+.title {
+    display: inline-block;
+    width: 100%;
+}
+
+.title .title-icon {
+    display: inline-block;
+    width: 40px;
+    height: 30px;
+    vertical-align: bottom;
+    background-size: cover;
+}
+
+.icon_o {
+    background: url("../fonts/icon_oo.png") no-repeat center;
+}
+
+.icon_t {
+    background: url("../fonts/icon_t.png") no-repeat center;
+}
+
+.title h1 {
+    display: inline-block;
+    font-size: 25px;
+    color: black !important;
+    text-align: left;
+    margin: 0;
+}
+
+/*-------------nav---------*/
 .navbar-default {
     position: fixed;
-    background-color: rgba(255, 255, 255, 0.3) !important;
+    background-color: rgba(255, 153, 51, 0.3) !important;
     /*-webkit-filter: blur(2px); !*像素值越大，越模糊*!*/
     /*-moz-filter: blur(2px);*/
     /*-ms-filter: blur(2px);*/
     /*filter: blur(2px);*/
     /*filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=2, MakeShadow=false);*/
+    /*background-image: url("https://images5.alphacoders.com/810/thumb-1920-810810.jpg");*/
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 100% 45%;
+    border: none;
 }
 
 .nav-mask {
@@ -139,56 +189,9 @@ html {
     font-size: 18px !important;
 }
 
-b {
-    color: white;
-    transition: .3s all;
+.navbar-default .dropdown-menu a {
+    color: #000 !important;
 }
-
-.tr {
-    text-align: right;
-}
-
-.tl {
-    text-align: left;
-}
-
-.title {
-    display: inline-block;
-    width: 100%;
-}
-
-.title .title-icon {
-    display: inline-block;
-    width: 40px;
-    height: 30px;
-    vertical-align: bottom;
-    background-size: cover;
-}
-
-.icon_o {
-    background: url("../fonts/icon_oo.png") no-repeat center;
-}
-
-.icon_t {
-    background: url("../fonts/icon_t.png") no-repeat center;
-}
-
-.title h1 {
-    display: inline-block;
-    font-size: 25px;
-    color: black !important;
-    text-align: left;
-    margin: 0;
-}
-
-/*-------------nav---------*/
-.navbar-default {
-    /*background-image: url("https://images5.alphacoders.com/810/thumb-1920-810810.jpg");*/
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 100% 45%;
-}
-
 .nav-bg {
     background-image: url("https://images5.alphacoders.com/810/thumb-1920-810810.jpg");
 }
@@ -196,11 +199,6 @@ b {
 .navbar-header button {
     border: none;
     outline: none;
-}
-
-
-.navbar-default .dropdown-menu a {
-    color: #000 !important;
 }
 
 .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
@@ -212,20 +210,14 @@ b {
 }
 a.navbar-brand{
     font-size: 20px!important;
-    color: #222!important;
-
+    color: white!important;
+    font-weight: bold;
 }
 
 .navbar-nav li > a{
-    color: #222!important;
+    color: white!important;
     font-size: 14px!important;
 }
-
-.navbar-default {
-    background-color: rgba(0, 0, 0, 0.2);
-    border: none;
-}
-
 .navbar-default .navbar-collapse {
     border: none;
 }
@@ -707,6 +699,16 @@ a.navbar-brand{
 
 
 /*--------code-study---------*/
+
+/*----------live2d----------------*/
+iframe{
+    z-index: 9999999!important;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+/*----------live2d----------------*/
 
 /*---------------foot---------------*/
 #foot {
