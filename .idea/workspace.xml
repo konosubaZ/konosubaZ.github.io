@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1bc76750-1591-4103-b573-d383b3e3cc0f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/dman.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/dman.css" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -18,10 +19,9 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="244">
-              <caret line="310" column="33" lean-forward="true" selection-start-line="310" selection-start-column="33" selection-end-line="310" selection-end-column="33" />
+            <state relative-caret-position="-68">
+              <caret line="25" column="53" selection-start-line="25" selection-start-column="51" selection-end-line="25" selection-end-column="53" />
               <folding>
-                <element signature="n#script#5;n#head#0;n#html#0;n#!!top" />
                 <element signature="n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#div#0;n#div#2;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
@@ -44,8 +44,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/dman.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="530">
-              <caret line="710" selection-start-line="710" selection-end-line="710" />
+            <state relative-caret-position="377">
+              <caret line="51" column="45" lean-forward="true" selection-start-line="51" selection-start-column="45" selection-end-line="51" selection-end-column="45" />
             </state>
           </provider>
         </entry>
@@ -78,6 +78,7 @@
       <find>http://localhost:63342</find>
       <find>active</find>
       <find>navbar-brand</find>
+      <find>bg</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -101,7 +102,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1936" />
@@ -171,12 +172,12 @@
       <workItem from="1574504475356" duration="3658000" />
       <workItem from="1574513518665" duration="718000" />
       <workItem from="1574514794798" duration="2384000" />
-      <workItem from="1574574226165" duration="3207000" />
+      <workItem from="1574574226165" duration="3941000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49342000" />
+    <option name="totallyTimeSpent" value="50076000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -249,10 +250,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="310" column="33" lean-forward="true" selection-start-line="310" selection-start-column="33" selection-end-line="310" selection-end-column="33" />
+        <state relative-caret-position="-68">
+          <caret line="25" column="53" selection-start-line="25" selection-start-column="51" selection-end-line="25" selection-end-column="53" />
           <folding>
-            <element signature="n#script#5;n#head#0;n#html#0;n#!!top" />
             <element signature="n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#div#0;n#div#2;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
@@ -264,8 +264,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css/dman.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="530">
-          <caret line="710" selection-start-line="710" selection-end-line="710" />
+        <state relative-caret-position="377">
+          <caret line="51" column="45" lean-forward="true" selection-start-line="51" selection-start-column="45" selection-end-line="51" selection-end-column="45" />
         </state>
       </provider>
     </entry>

@@ -12,6 +12,7 @@ html {
     background-color: hotpink;
 }
 
+
 /*-------zero-preview----------*/
 .zero-preview {
     position: fixed;
@@ -54,9 +55,23 @@ html {
     background-attachment: fixed;
     background-size: 100% 100%;
 }
-#home{
+
+#bg:before {
+    content: ' ';
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: url(../fonts/bg.png) center no-repeat;
+    background-size: cover;
+}
+
+#home {
     overflow: hidden;
 }
+
 @media screen and (max-width: 768px) {
     #bg {
         background-size: cover !important;
@@ -192,6 +207,7 @@ b {
 .navbar-default .dropdown-menu a {
     color: #000 !important;
 }
+
 .nav-bg {
     background-image: url("https://images5.alphacoders.com/810/thumb-1920-810810.jpg");
 }
@@ -208,16 +224,18 @@ b {
 .navbar-default .navbar-toggle .icon-bar {
     background-color: white !important;
 }
-a.navbar-brand{
-    font-size: 20px!important;
-    color: white!important;
+
+a.navbar-brand {
+    font-size: 20px !important;
+    color: white !important;
     font-weight: bold;
 }
 
-.navbar-nav li > a{
-    color: white!important;
-    font-size: 14px!important;
+.navbar-nav li > a {
+    color: white !important;
+    font-size: 14px !important;
 }
+
 .navbar-default .navbar-collapse {
     border: none;
 }
@@ -519,14 +537,14 @@ a.navbar-brand{
     cursor: pointer;
     color: black;
     height: 30px;
-  }
+}
 
 .animate-recommend .title .exchange span {
     display: inline-block;
     font-size: 14px;
     vertical-align: top;
     margin-right: 5px;
- }
+}
 
 
 .animate-recommend .title .exchange span.xuanz {
@@ -701,16 +719,17 @@ a.navbar-brand{
 /*--------code-study---------*/
 
 /*----------live2d----------------*/
-#live2d-box{
+#live2d-box {
     width: 100%;
     height: 300px;
     position: fixed;
     bottom: 0;
     left: 0;
-    z-index: 9999999!important;
+    z-index: 9999999 !important;
 
 }
-iframe{
+
+iframe {
 }
 
 /*----------live2d----------------*/
@@ -739,15 +758,18 @@ iframe{
     height: auto;
     transform: rotateY(180deg);
 }
-#foot .copry{
+
+#foot .copry {
     width: 100%;
 }
-#foot .copry h2{
+
+#foot .copry h2 {
     text-align: center;
     font-size: 16px;
     color: white;
     line-height: 100px;
 }
+
 @media screen and (max-width: 768px) {
     #foot .landlord {
         display: none;
