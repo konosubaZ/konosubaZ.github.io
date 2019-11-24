@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1bc76750-1591-4103-b573-d383b3e3cc0f" name="Default Changelist" comment="" />
+    <list default="true" id="1bc76750-1591-4103-b573-d383b3e3cc0f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/css/dman.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/dman.css" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -42,8 +44,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/dman.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="355">
-              <caret line="697" column="1" lean-forward="true" selection-start-line="697" selection-start-column="1" selection-end-line="697" selection-end-column="1" />
+            <state relative-caret-position="530">
+              <caret line="710" selection-start-line="710" selection-end-line="710" />
             </state>
           </provider>
         </entry>
@@ -94,12 +96,12 @@
         <option value="$PROJECT_DIR$/js/animate.js" />
         <option value="$PROJECT_DIR$/public/admin/api/index.json" />
         <option value="$PROJECT_DIR$/live2d/live2d.html" />
-        <option value="$PROJECT_DIR$/css/dman.css" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/css/dman.css" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1936" />
@@ -169,12 +171,12 @@
       <workItem from="1574504475356" duration="3658000" />
       <workItem from="1574513518665" duration="718000" />
       <workItem from="1574514794798" duration="2384000" />
-      <workItem from="1574574226165" duration="2907000" />
+      <workItem from="1574574226165" duration="3207000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49042000" />
+    <option name="totallyTimeSpent" value="49342000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -262,8 +264,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css/dman.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="355">
-          <caret line="697" column="1" lean-forward="true" selection-start-line="697" selection-start-column="1" selection-end-line="697" selection-end-column="1" />
+        <state relative-caret-position="530">
+          <caret line="710" selection-start-line="710" selection-end-line="710" />
         </state>
       </provider>
     </entry>
