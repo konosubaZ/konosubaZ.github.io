@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1bc76750-1591-4103-b573-d383b3e3cc0f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/dman.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/dman.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-    </list>
+    <list default="true" id="1bc76750-1591-4103-b573-d383b3e3cc0f" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -17,11 +13,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="394">
-              <caret line="337" column="10" lean-forward="true" selection-start-line="337" selection-start-column="10" selection-end-line="337" selection-end-column="10" />
+            <state relative-caret-position="244">
+              <caret line="310" column="33" lean-forward="true" selection-start-line="310" selection-start-column="33" selection-end-line="310" selection-end-column="33" />
               <folding>
                 <element signature="n#script#5;n#head#0;n#html#0;n#!!top" />
                 <element signature="n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" />
@@ -43,20 +39,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/dman.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="155">
-              <caret line="689" column="1" lean-forward="true" selection-start-line="689" selection-start-column="1" selection-end-line="689" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/admin/api/index.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4875">
-              <caret line="195" column="6" selection-start-line="195" selection-start-column="6" selection-end-line="195" selection-end-column="6" />
+            <state relative-caret-position="355">
+              <caret line="697" column="1" lean-forward="true" selection-start-line="697" selection-start-column="1" selection-end-line="697" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -182,12 +169,12 @@
       <workItem from="1574504475356" duration="3658000" />
       <workItem from="1574513518665" duration="718000" />
       <workItem from="1574514794798" duration="2384000" />
-      <workItem from="1574574226165" duration="2514000" />
+      <workItem from="1574574226165" duration="2907000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48649000" />
+    <option name="totallyTimeSpent" value="49042000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -234,13 +221,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/admin/api/index.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4875">
-          <caret line="195" column="6" selection-start-line="195" selection-start-column="6" selection-end-line="195" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/live2d/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
@@ -258,17 +238,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/dman.css">
+    <entry file="file://$PROJECT_DIR$/public/admin/api/index.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="689" column="1" lean-forward="true" selection-start-line="689" selection-start-column="1" selection-end-line="689" selection-end-column="1" />
+        <state relative-caret-position="69">
+          <caret line="165" column="6" lean-forward="true" selection-start-line="165" selection-start-column="6" selection-end-line="165" selection-end-column="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="394">
-          <caret line="337" column="10" lean-forward="true" selection-start-line="337" selection-start-column="10" selection-end-line="337" selection-end-column="10" />
+        <state relative-caret-position="244">
+          <caret line="310" column="33" lean-forward="true" selection-start-line="310" selection-start-column="33" selection-end-line="310" selection-end-column="33" />
           <folding>
             <element signature="n#script#5;n#head#0;n#html#0;n#!!top" />
             <element signature="n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" />
@@ -277,6 +257,13 @@
             <element signature="n#div#0;n#div#3;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#nav#0;n#div#3;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/dman.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="355">
+          <caret line="697" column="1" lean-forward="true" selection-start-line="697" selection-start-column="1" selection-end-line="697" selection-end-column="1" />
         </state>
       </provider>
     </entry>
