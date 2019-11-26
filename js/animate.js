@@ -3,7 +3,7 @@ $(document).ready(function () {
         var swiper1 = new Swiper('.swiper1', {
             slidesPerView: 3.5,
             autoplay: {
-                delay:2000,
+                delay: 2000,
                 stopOnLastSlide: false,
                 disableOnInteraction: false
             },
@@ -20,10 +20,10 @@ $(document).ready(function () {
                     slidesPerView: 1
                 }
             },
-            observer:true,//修改swiper自己或子元素时，自动初始化swiper
-            observeParents:true//修改swiper的父元素时，自动初始化swiper
+            observer: true,//修改swiper自己或子元素时，自动初始化swiper
+            observeParents: true//修改swiper的父元素时，自动初始化swiper
         });
-    },300);
+    }, 300);
 
     ISnavbar();
 
@@ -47,20 +47,23 @@ $(document).ready(function () {
         });
     }
 
+    $('.column-item-cover').find('span').click(function () {
+        console.log('sss');
+        if ($(this).hasClass('spanColor')) {
+            $(this).removeClass('spanColor').removeClass('rubberBand');
+        } else {
+            $(this).addClass('spanColor').addClass('rubberBand');
+        }
+    });
 
-
-    columnSpan();
-
-    function columnSpan() {
-        $('.column-item-cover').find('span').click(function () {
-            console.log('sss');
-            if ($(this).hasClass('spanColor')) {
-                $(this).removeClass('spanColor').removeClass('rubberBand');
-            } else {
-                $(this).addClass('spanColor').addClass('rubberBand');
-            }
-        })
-    }
+    $(function () {
+        $('.zero-preview').click(function (e) {
+            $(this).css({'opacity': '0','z-index':'0'});
+        });
+        $('.zero-img').click(function(e) {
+            e.stopPropagation();
+        });
+    })
 
 });
 

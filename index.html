@@ -5,7 +5,7 @@
           content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>为美好世界献上代码</title>
     <meta name="keywords" content="前端,jQuery,CSS,HTML,Javascript,动画,漫画,游戏,原创博客"/>
-    <meta name="description" content="Konisuba！"/>
+    <meta name="description" content="Konosuba！"/>
     <meta name="generator" content="emlog"/>
     <meta itemprop="name" content="为美好世界献上代码 "/>
     <link rel="icon" href="fonts/icon/icon.jpg" sizes="32x32">
@@ -14,36 +14,6 @@
     <link rel="stylesheet" href="css/swiper.css">
     <link rel="stylesheet" href="css/dman.css">
     <script src="js/jquery.js"></script>
-    <script src="js/bootstrap.js"></script>
-    <script src="js/swiper.js"></script>
-    <script src="js/animate.js"></script>
-    <script src="js/jquery.parallax-scroll.js"></script>
-    <script>
-        $(window).scroll(function () {
-            var scrolled = $(this).scrollTop();
-            $('.image').css('top', (0 + (scrolled * .75)) + 'px');
-            if (scrolled >= 320) {
-                $('.navbar-default').addClass('nav-bg');
-            } else {
-                $('.navbar-default').removeClass('nav-bg');
-            }
-        });
-        document.onkeydown = function (event) {
-            var e = event || window.event || arguments.callee.caller.arguments[0];
-            if (e && e.keyCode == 27) { // 按 Esc
-                //要做的事情
-                $('.zero-preview').css({'opacity': '0', 'z-index': '0'});
-            }
-            if (e && e.keyCode == 113) { // 按 F2
-                //要做的事情
-            }
-            if (e && e.keyCode == 13) { // enter 键
-                //要做的事情
-            }
-        };
-    </script>
-    <style>
-    </style>
 </head>
 <body id="bg">
 <div id="home">
@@ -52,48 +22,12 @@
             <img class="zero-img" src="" alt="">
         </div>
     </div>
-    <nav class="navbar navbar-default navbar-fixed-top">
-        <div class="blur-bg"></div>
-        <div class="nav-mask"></div>
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                        data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#" style="font-size: 18px;font-family: '楷体'">Konisuba</a>
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">首页 <span class="sr-only">(current)</span></a></li>
-                    <li><a href="#">里世界</a></li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                           aria-haspopup="true" aria-expanded="false">绅士<span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">前端</a></li>
-                            <li><a href="#">后端</a></li>
-                            <li><a href="#">代码福利</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li><a href="#">绝对领域</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">友链</a></li>
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#">注册</a></li>
-                    <li><a href="#">登录</a></li>
-                </ul>
-            </div><!-- /.navbar-collapse -->
-        </div><!-- /.container-fluid -->
-    </nav>
-
+    <nav class="navbar navbar-default navbar-fixed-top"></nav>
+    <script>
+        $('.navbar').load('public/index/nav/index.html',function(responseTxt,statusTxt,xhr){
+            console.log('responseTxt,statusTxt,xhr')
+        })
+    </script>
     <div id="box">
         <div class="topimg">
             <div class="image">
@@ -132,13 +66,13 @@
                     wrapper.appendChild(slide);
                 }
             };
-            // 提供jsonp服务的url地址（不管是什么类型的地址，最终生成的返回值都是一段javascript代码）
-            var url = "https://konosubaz.github.io/public/admin/api/indexData.js";
-            // 创建script标签，设置其属性
-            var script = document.createElement('script');
-            script.setAttribute('src', url);
-            // 把script标签加入head，此时调用开始
-            document.getElementsByTagName('head')[0].appendChild(script);
+            // // 提供jsonp服务的url地址（不管是什么类型的地址，最终生成的返回值都是一段javascript代码）
+            // var url = "https://konosubaz.github.io/public/admin/api/indexData.js";
+            // // 创建script标签，设置其属性
+            // var script = document.createElement('script');
+            // script.setAttribute('src', url);
+            // // 把script标签加入head，此时调用开始
+            // document.getElementsByTagName('head')[0].appendChild(script);
             $(".swiper-wrapper").on('mouseenter', '.img', function (e) {
                 $(this).stop().css('transform', 'scale(1.2)').css('filter', 'blur(5px)');
             }).on('mouseout', '.img', function (e) {
@@ -165,149 +99,6 @@
                 </div>
             </div>
         </div>
-        <script type="text/javascript">
-            var list = [];
-            var newsData = [];
-            var newslist = [];
-            animateData();
-            function animateData() {
-                $.ajax({
-                    //请求方式为get
-                    type: "GET",
-                    //json文件位置
-                    url: "https://konosubaz.github.io/public/admin/api/index.json",
-                    //返回数据格式为json
-                    dataType: "json",
-                    //请求成功完成后要执行的方法
-                    success: function (data) {
-                        list = data.list;
-                        newslist = data.news;
-
-                        createDiv();
-                        createNews();
-
-                        $('.recommend-item').hover(function () {
-                            $(this).find('img').stop().css('transform', 'scale(1.2)');
-                            $(this).find('.recommend-table').stop().animate({bottom: '-25px'}, 200);
-                        }, function () {
-                            $(this).find('img').stop().css('transform', 'scale(1)');
-                            $(this).find('.recommend-table').stop().animate({bottom: '5px'}, 200);
-                        })
-                    }
-                });
-            }
-
-            // and the result is...
-            Array.prototype.shuffle = function () {
-                var input = this;
-                for (var i = input.length - 1; i >= 0; i--) {
-                    var randomIndex = Math.floor(Math.random() * (i + 1));
-                    var itemAtIndex = input[randomIndex];
-                    input[randomIndex] = input[i];
-                    input[i] = itemAtIndex;
-                }
-                return input;
-            }
-            $('.exchange').click(function () {
-                list.shuffle();
-                $.ajax({
-                    //请求方式为get
-                    type: "GET",
-                    //json文件位置
-                    url: "https://konosubaz.github.io/public/admin/api/index.json",
-                    //返回数据格式为json
-                    dataType: "json",
-                    //请求成功完成后要执行的方法
-                    success: function (data) {
-                        createDiv();
-                        $('.recommend-item').hover(function () {
-                            $(this).find('img').stop().css('transform', 'scale(1.2)');
-                            $(this).find('.recommend-table').stop().animate({bottom: '-25px'}, 200);
-                        }, function () {
-                            $(this).find('img').stop().css('transform', 'scale(1)');
-                            $(this).find('.recommend-table').stop().animate({bottom: '5px'}, 200);
-                        })
-                    }
-                });
-                var timer;
-                var spanIcon = $(this).find('span').eq(0);
-                clearTimeout(timer);
-                if (spanIcon.hasClass('xuanz')) {
-                    spanIcon.removeClass('xuanz');
-                } else {
-                    spanIcon.addClass('xuanz');
-                    timer = setTimeout(function () {
-                        spanIcon.removeClass('xuanz');
-                    }, 500);
-                }
-            });
-
-            function createDiv() {
-                var html = [];
-                for (var i = 0; i < 8; i++) {
-                    var divAnimate =
-                        '<div class="col-md-3 col-xs-6">' +
-                        '<div class="recommend-item">' +
-                        '<div class="recommend-item-cover">' +
-                        '<img src="' + list[i].imgUrl + '" alt="">' +
-                        '</div>' +
-                        '<div class="recommend-item-msg">' +
-                        '<h3>' + list[i].title + '</h3>' +
-                        '<div class="recommend-table">' +
-                        '<div class="table-item">' +
-                        '<span class="glyphicon glyphicon-play-circle"></span>' +
-                        '<p>' + list[i].play + '</p>' +
-                        '</div>' +
-                        '<div class="table-item">' +
-                        '<span class="glyphicon glyphicon-list-alt"></span>' +
-                        '<p>' + list[i].comments + '</p>' +
-                        '</div>' +
-                        '<div class="table-item">' +
-                        '<span class="glyphicon glyphicon-phone"></span>' +
-                        '<p>' + list[i].mobile + '</p>' +
-                        '</div>' +
-                        '</div>' +
-                        '</div>' +
-                        '</div>' +
-                        '</div>';
-                    html.push(divAnimate);
-                    var row = $('div.recommend-content').find('div.row');
-                    row.html(html)
-                }
-            }
-            function createNews() {
-                for (var n = 0; n < newslist.length; n++) {
-                    var news = '  <div class="news-item">' +
-                        '<div class="row">' +
-                        ' <div class="col-md-4">' +
-                        '<div class="news-item-cover">' +
-                        ' <img src="'+ newslist[n].imgUrl +'" alt="">' +
-                        '</div>' +
-                        '</div>' +
-                        '<div class="col-md-8">' +
-                        '<div class="news-item-msg">' +
-                        '<p class="clearfix-title">'+ newslist[n].title +'</p>' +
-                        '<div class="tags">' +
-                        ' <span><a href="javascript:;">'+ newslist[n].targ.time +'</a></span>' +
-                        ' <span><a href="javascript:;">'+ newslist[n].targ.user +'</a></span>' +
-                        '  <span><a href="javascript:;">'+ newslist[n].targ.type +'</a></span>' +
-                        ' </div>' +
-                        '<div class="details">' +
-                        '<p>'+ newslist[n].info +'</p>' +
-                        '</div>' +
-                        '<div class="more-btn">' +
-                        '  <a href="javascript:;">Read More</a>' +
-                        '</div>' +
-                        '</div>' +
-                        '</div>' +
-                        '</div>' +
-                        '</div>';
-                    newsData.push(news);
-                    var nwebox = $('.news-box');
-                    nwebox.html(newsData);
-                }
-            }
-        </script>
         <div class="recent-news">
             <div class="title">
                 <span class="title-icon icon_t"></span>
@@ -337,17 +128,180 @@
         </div>
     </div>
     <div id="live2d-box">
-        <iframe src="https://konosubaz.github.io/live2d/index.html" width="100%"; height="300px" frameborder="0" scrolling="no" name="headFrame"></iframe>
+        <iframe src="https://konosubaz.github.io/live2d/index.html" width="100%" ; height="300px" frameborder="0"
+                scrolling="no" name="headFrame"></iframe>
     </div>
-    <div id="foot">
-<!--        <div class="landlord">-->
-<!--            <img src="fonts/akuyae.png" alt="">-->
-<!--            <img src="fonts/icon_s.png" alt="">-->
-<!--        </div>-->
-        <div class="copry">
-            <h2> © 2019 为美好世界献上代码</h2>
-        </div>
-    </div>
+    <foot class="footer"></foot>
+    <script>
+        $('.footer').load('public/index/foot/index.html',function(responseTxt,statusTxt,xhr){
+            console.log('responseTxt,statusTxt,xhr')
+        })
+    </script>
 </div>
+<script src="https://konosubaz.github.io/public/admin/api/indexData.js"></script>
+<script src="js/jquery.parallax-scroll.js"></script>
+<script>
+    $(window).scroll(function () {
+        var scrolled = $(this).scrollTop();
+        $('.image').css('top', (0 + (scrolled * .75)) + 'px');
+    });
+    document.onkeydown = function (event) {
+        var e = event || window.event || arguments.callee.caller.arguments[0];
+        if (e && e.keyCode == 27) { // 按 Esc
+            //要做的事情
+            $('.zero-preview').css({'opacity': '0', 'z-index': '0'});
+        }
+        if (e && e.keyCode == 113) { // 按 F2
+            //要做的事情
+        }
+        if (e && e.keyCode == 13) { // enter 键
+            //要做的事情
+        }
+    };
+</script>
+<script src="js/bootstrap.js"></script>
+<script src="js/swiper.js"></script>
+<script src="js/animate.js"></script>
+<script type="text/javascript">
+    var list = [];
+    var newsData = [];
+    var newslist = [];
+    animateData();
+    function animateData() {
+        $.ajax({
+            //请求方式为get
+            type: "GET",
+            //json文件位置
+            url: "https://konosubaz.github.io/public/admin/api/index.json",
+            //返回数据格式为json
+            dataType: "json",
+            //请求成功完成后要执行的方法
+            success: function (data) {
+                list = data.list;
+                newslist = data.news;
+
+                createDiv();
+                createNews();
+
+                $('.recommend-item').hover(function () {
+                    $(this).find('img').stop().css('transform', 'scale(1.2)');
+                    $(this).find('.recommend-table').stop().animate({bottom: '-25px'}, 200);
+                }, function () {
+                    $(this).find('img').stop().css('transform', 'scale(1)');
+                    $(this).find('.recommend-table').stop().animate({bottom: '5px'}, 200);
+                })
+            }
+        });
+    }
+    // and the result is...
+    Array.prototype.shuffle = function () {
+        var input = this;
+        for (var i = input.length - 1; i >= 0; i--) {
+            var randomIndex = Math.floor(Math.random() * (i + 1));
+            var itemAtIndex = input[randomIndex];
+            input[randomIndex] = input[i];
+            input[i] = itemAtIndex;
+        }
+        return input;
+    }
+    $('.exchange').click(function () {
+        list.shuffle();
+        $.ajax({
+            //请求方式为get
+            type: "GET",
+            //json文件位置
+            url: "https://konosubaz.github.io/public/admin/api/index.json",
+            //返回数据格式为json
+            dataType: "json",
+            //请求成功完成后要执行的方法
+            success: function (data) {
+                createDiv();
+                $('.recommend-item').hover(function () {
+                    $(this).find('img').stop().css('transform', 'scale(1.2)');
+                    $(this).find('.recommend-table').stop().animate({bottom: '-25px'}, 200);
+                }, function () {
+                    $(this).find('img').stop().css('transform', 'scale(1)');
+                    $(this).find('.recommend-table').stop().animate({bottom: '5px'}, 200);
+                })
+            }
+        });
+        var timer;
+        var spanIcon = $(this).find('span').eq(0);
+        clearTimeout(timer);
+        if (spanIcon.hasClass('xuanz')) {
+            spanIcon.removeClass('xuanz');
+        } else {
+            spanIcon.addClass('xuanz');
+            timer = setTimeout(function () {
+                spanIcon.removeClass('xuanz');
+            }, 500);
+        }
+    });
+    function createDiv() {
+        var html = [];
+        for (var i = 0; i < 8; i++) {
+            var divAnimate =
+                '<div class="col-md-3 col-xs-6">' +
+                '<div class="recommend-item">' +
+                '<div class="recommend-item-cover">' +
+                '<img src="' + list[i].imgUrl + '" alt="">' +
+                '</div>' +
+                '<div class="recommend-item-msg">' +
+                '<h3>' + list[i].title + '</h3>' +
+                '<div class="recommend-table">' +
+                '<div class="table-item">' +
+                '<span class="glyphicon glyphicon-play-circle"></span>' +
+                '<p>' + list[i].play + '</p>' +
+                '</div>' +
+                '<div class="table-item">' +
+                '<span class="glyphicon glyphicon-list-alt"></span>' +
+                '<p>' + list[i].comments + '</p>' +
+                '</div>' +
+                '<div class="table-item">' +
+                '<span class="glyphicon glyphicon-phone"></span>' +
+                '<p>' + list[i].mobile + '</p>' +
+                '</div>' +
+                '</div>' +
+                '</div>' +
+                '</div>' +
+                '</div>';
+            html.push(divAnimate);
+            var row = $('div.recommend-content').find('div.row');
+            row.html(html)
+        }
+    }
+    function createNews() {
+        for (var n = 0; n < newslist.length; n++) {
+            var news = '  <div class="news-item">' +
+                '<div class="row">' +
+                ' <div class="col-md-4">' +
+                '<div class="news-item-cover">' +
+                ' <img src="' + newslist[n].imgUrl + '" alt="">' +
+                '</div>' +
+                '</div>' +
+                '<div class="col-md-8">' +
+                '<div class="news-item-msg">' +
+                '<p class="clearfix-title">' + newslist[n].title + '</p>' +
+                '<div class="tags">' +
+                ' <span><a href="javascript:;">' + newslist[n].targ.time + '</a></span>' +
+                ' <span><a href="javascript:;">' + newslist[n].targ.user + '</a></span>' +
+                '  <span><a href="javascript:;">' + newslist[n].targ.type + '</a></span>' +
+                ' </div>' +
+                '<div class="details">' +
+                '<p>' + newslist[n].info + '</p>' +
+                '</div>' +
+                '<div class="more-btn">' +
+                '  <a href="javascript:;">Read More</a>' +
+                '</div>' +
+                '</div>' +
+                '</div>' +
+                '</div>' +
+                '</div>';
+            newsData.push(news);
+            var nwebox = $('.news-box');
+            nwebox.html(newsData);
+        }
+    }
+</script>
 </body>
 </html>

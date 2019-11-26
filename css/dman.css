@@ -11,7 +11,9 @@ html {
     color: #000;
     background-color: hotpink;
 }
-
+#home{
+    overflow: hidden;
+}
 
 /*-------zero-preview----------*/
 .zero-preview {
@@ -49,11 +51,11 @@ html {
     /*http://gf.ppgame.com/CKFinderJava/1/files/033.jpg*/
     /*background-image: url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1564512131219&di=5d824364ab5a9f84971b6c3410c58801&imgtype=0&src=http%3A%2F%2Fi0.hdslb.com%2Fbfs%2Farticle%2Fb0fdb8c99e90edaa85edaa84349909c472501c45.png);*/
     /*background-image: url("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1573935603469&di=c53a269e8cf0e7fbbd66529bf12414ce&imgtype=0&src=http%3A%2F%2Fpic1.win4000.com%2Fwallpaper%2F2018-11-13%2F5bea75b424a58.jpg");*/
-    background-image: url("../fonts/bg.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-    background-size: 100% 100%;
+    /*background-image: url("https://images5.alphacoders.com/694/thumb-1920-694669.jpg");*/
+    /*background-repeat: no-repeat;*/
+    /*background-position: center;*/
+    /*background-attachment: fixed;*/
+    /*background-size: 100% 100%;*/
 }
 
 #bg:before {
@@ -64,12 +66,9 @@ html {
     right: 0;
     bottom: 0;
     left: 0;
-    background: url(../fonts/bg.png) center no-repeat;
+    background: url(../fonts/bg3.jpg) center no-repeat;
     background-size: cover;
-}
-
-#home {
-    overflow: hidden;
+    transform: rotateY(180deg);
 }
 
 @media screen and (max-width: 768px) {
@@ -141,7 +140,7 @@ b {
 /*-------------nav---------*/
 .navbar-default {
     position: fixed;
-    background-color: rgba(255, 153, 51, 0.3) !important;
+    background-color: rgba(255, 255, 255,0.6) !important;
     /*-webkit-filter: blur(2px); !*像素值越大，越模糊*!*/
     /*-moz-filter: blur(2px);*/
     /*-ms-filter: blur(2px);*/
@@ -226,13 +225,12 @@ b {
 }
 
 a.navbar-brand {
-    font-size: 20px !important;
-    color: white !important;
-    font-weight: bold;
+    font-size: 22px !important;
+    color: black !important;
 }
 
 .navbar-nav li > a {
-    color: white !important;
+    color: black !important;
     font-size: 14px !important;
 }
 
@@ -242,6 +240,7 @@ a.navbar-brand {
 
 .navbar-default .navbar-nav > .active > a {
     background: rgba(255, 255, 255, 0.1) !important;
+    color: white!important;
 }
 
 .navbar-default .navbar-nav > li > a {
@@ -413,7 +412,7 @@ a.navbar-brand {
     -webkit-line-clamp: 1;
     overflow: hidden;
     font-size: 22px;
-    color: black !important;
+    color: #222 !important;
     cursor: pointer;
     transition: .3s all ease;
 }
@@ -459,7 +458,7 @@ a.navbar-brand {
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
     overflow: hidden;
-    color: #4C4C4C !important;
+    color: #222 !important;
 }
 
 .more-btn {
@@ -535,7 +534,7 @@ a.navbar-brand {
     display: inline-block;
     float: right;
     cursor: pointer;
-    color: black;
+    color: white;
     height: 30px;
 }
 
@@ -573,6 +572,7 @@ a.navbar-brand {
     cursor: pointer;
     transition: .3s all ease;
     margin-top: 20px;
+    box-shadow: 0 2px 4px #bbb;
 }
 
 .recommend-item .recommend-item-cover {
@@ -768,12 +768,6 @@ iframe {
     font-size: 16px;
     color: white;
     line-height: 100px;
-}
-
-@media screen and (max-width: 768px) {
-    #foot .landlord {
-        display: none;
-    }
 }
 
 /*---------------foot---------------*/
