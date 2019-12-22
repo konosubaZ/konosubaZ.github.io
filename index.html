@@ -4,7 +4,7 @@
     <meta charset="UTF-8" name="viewport"
           content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>为美好世界献上代码</title>
-    <meta name="keywords" content="前端,jQuery,CSS,HTML,Javascript,动画,漫画,游戏,原创博客"/>
+    <meta name="keywords" content="动画,漫画,游戏,偶尔前端的原创博客"/>
     <meta name="description" content="Konosuba！"/>
     <meta name="generator" content="emlog"/>
     <meta itemprop="name" content="为美好世界献上代码 "/>
@@ -13,7 +13,11 @@
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/swiper.css">
     <link rel="stylesheet" href="css/dman.css">
+    <link rel="stylesheet" type="text/css" href="live2d/assets/waifu.css"/>
     <script src="js/jquery.js"></script>
+    <style>
+
+    </style>
 </head>
 <body id="bg">
 <div id="home">
@@ -23,109 +27,189 @@
         </div>
     </div>
     <nav class="navbar navbar-default navbar-fixed-top"></nav>
+    <div class="bolang">
+        <div class="waveWrapper waveAnimation">
+            <div class="waveWrapperInner bgTop">
+                <div class="wave waveTop" style="background-image: url('http://demo.sc.chinaz.net/Files/DownLoad/webjs1/201708/jiaoben5332/img/wave-top.png')"></div>
+            </div>
+            <div class="waveWrapperInner bgMiddle">
+                <div class="wave waveMiddle" style="background-image: url('http://demo.sc.chinaz.net/Files/DownLoad/webjs1/201708/jiaoben5332/img/wave-mid.png')"></div>
+            </div>
+            <div class="waveWrapperInner bgBottom">
+                <div class="wave waveBottom" style="background-image: url('http://demo.sc.chinaz.net/Files/DownLoad/webjs1/201708/jiaoben5332/img/wave-bot.png')"></div>
+            </div>
+        </div>
+    </div>
+    <div id="topimg">
+        <div class="topimg-info">
+
+            <!--以下是春节倒计时代码-->
+<!--                    <div class="time-countdown">-->
+<!--                        <ul class="countdown">-->
+<!--                            <li> <span class="days">00</span>-->
+<!--                                <p class="days_ref">days</p>-->
+<!--                            </li>-->
+<!--                            <li class="seperator">.</li>-->
+<!--                            <li> <span class="hours">00</span>-->
+<!--                                <p class="hours_ref">hours</p>-->
+<!--                            </li>-->
+<!--                            <li class="seperator">:</li>-->
+<!--                            <li> <span class="minutes">00</span>-->
+<!--                                <p class="minutes_ref">minutes</p>-->
+<!--                            </li>-->
+<!--                            <li class="seperator">:</li>-->
+<!--                            <li> <span class="seconds">00</span>-->
+<!--                                <p class="seconds_ref">seconds</p>-->
+<!--                            </li>-->
+<!--                        </ul>-->
+<!--                    </div>-->
+            <div class="linkbox">
+                <a href="javascript:;"></a>
+            </div>
+            <div class="ctaBox">
+                <a class="cta">この素晴らしい世界に祝福を！</a>
+            </div>
+        </div>
+    </div>
     <script>
-        $('.navbar').load('public/index/nav/index.html',function(responseTxt,statusTxt,xhr){
+        $('.navbar').load('public/index/nav/index.html', function (responseTxt, statusTxt, xhr) {
             console.log('responseTxt,statusTxt,xhr')
         })
+
+        let $cta = $('.cta');
+        let createBtnsMarkup = () => {
+            $cta.each((i, btn) => {
+                let $t = $(btn);
+                let $btnText = $t.text();
+                let $splitText = $btnText.split("");
+
+                $t.html("").append(`
+				<span class="btn-text-parent">
+					<span class="wrap_text current-btn-text"></span>
+					<span class="wrap_text buildin-btn-text"></span>
+				</span>
+			`);
+
+                for (let i = 0; i < $splitText.length; i++) {
+                    $t.
+                    find(".wrap_text").
+                    append(`<span class="btn-letter">${$splitText[i]}</span>`);
+                }
+            });
+        };
+
+
+        window.onLoad = createBtnsMarkup();
     </script>
     <div id="box">
-        <div class="topimg">
-            <div class="image">
-                <!--https://coverfiles.alphacoders.com/112/112554.png-->
-                <img src="https://coverfiles.alphacoders.com/498/49851.jpg" alt="">
-            </div>
-        </div>
-        <div class="banner">
-            <div class="swiper-container swiper1">
-                <div class="swiper-wrapper">
+        <div class="space">
+            <div class="banner">
+                <div class="swiper-container swiper1">
+                    <div class="swiper-wrapper">
+                    </div>
                 </div>
             </div>
-        </div>
-        <script type="text/javascript">
-            var bannerData = function (data) {
-                for (var i = 0; i < data.length; i++) {
-                    var slide = document.createElement('div');
-                    var slideimg = document.createElement('div');
-                    var img = document.createElement('img');
-                    slide.className = 'swiper-slide';
-                    slideimg.className = 'slide-img';
-                    img.className = 'img';
-                    img.src = data[i];
-                    slideimg.appendChild(img);
-                    slide.appendChild(slideimg);
-                    var swiper1 = document.getElementsByClassName('swiper1')[0];
-                    var wrapper = swiper1.firstElementChild;
-                    wrapper.appendChild(slide);
-                }
-            };
-            // // 提供jsonp服务的url地址（不管是什么类型的地址，最终生成的返回值都是一段javascript代码）
-            // var url = "https://konosubaz.github.io/public/admin/api/indexData.js";
-            // // 创建script标签，设置其属性
-            // var script = document.createElement('script');
-            // script.setAttribute('src', url);
-            // // 把script标签加入head，此时调用开始
-            // document.getElementsByTagName('head')[0].appendChild(script);
-            $(".swiper-wrapper").on('mouseenter', '.img', function (e) {
-                $(this).stop().css('transform', 'scale(1.2)').css('filter', 'blur(5px)');
-            }).on('mouseout', '.img', function (e) {
-                $(this).stop().css('transform', 'scale(1)').css('filter', 'blur(0)');
-            });
-            $(".swiper-wrapper").on('click', '.img', function (e) {
-                var imgSrc = $(this).context.currentSrc;
-                $('.zero-preview').css({'opacity': '1', 'z-index': '99999'});
-                $('.zero-preview').find('img').attr('src', imgSrc);
-            });
+            <script type="text/javascript">
+                var bannerData = function (data) {
+                    for (var i = 0; i < data.length; i++) {
+                        var slide = document.createElement('div');
+                        var slideimg = document.createElement('div');
+                        var img = document.createElement('img');
+                        slide.className = 'swiper-slide';
+                        slideimg.className = 'slide-img';
+                        img.className = 'img';
+                        img.src = data[i];
+                        slideimg.appendChild(img);
+                        slide.appendChild(slideimg);
+                        var swiper1 = document.getElementsByClassName('swiper1')[0];
+                        var wrapper = swiper1.firstElementChild;
+                        wrapper.appendChild(slide);
+                    }
+                };
+                // // 提供jsonp服务的url地址（不管是什么类型的地址，最终生成的返回值都是一段javascript代码）
+                // var url = "https://konosubaz.github.io/public/admin/api/indexData.js";
+                // // 创建script标签，设置其属性
+                // var script = document.createElement('script');
+                // script.setAttribute('src', url);
+                // // 把script标签加入head，此时调用开始
+                // document.getElementsByTagName('head')[0].appendChild(script);
+                $(".swiper-wrapper").on('mouseenter', '.img', function (e) {
+                    $(this).stop().css('transform', 'scale(1.2)').css('filter', 'blur(5px)');
+                }).on('mouseout', '.img', function (e) {
+                    $(this).stop().css('transform', 'scale(1)').css('filter', 'blur(0)');
+                });
+                $(".swiper-wrapper").on('click', '.img', function (e) {
+                    var imgSrc = $(this).context.currentSrc;
+                    $('.zero-preview').css({'opacity': '1', 'z-index': '99999'});
+                    $('.zero-preview').find('img').attr('src', imgSrc);
+                });
 
-        </script>
-        <div class="animate-recommend">
-            <div class="title">
-                <span class="title-icon icon_o"></span>
-                <h1>不是阿宅不戳进来</h1>
-                <div class="exchange">
-                    <span class="glyphicon glyphicon-refresh"></span>
-                    <span>换一换</span>
+            </script>
+            <div class="animate-recommend">
+                <div class="title">
+                    <span class="title-icon icon_o"></span>
+                    <h1>不是阿宅不戳进来</h1>
+                    <div class="exchange">
+                        <span class="glyphicon glyphicon-refresh"></span>
+                        <span>换一换</span>
+                    </div>
+                </div>
+                <div class="recommend-content">
+                    <div class="row">
+                    </div>
                 </div>
             </div>
-            <div class="recommend-content">
-                <div class="row">
+            <div class="advert"></div>
+            <div class="recent-news">
+                <div class="title">
+                    <span class="title-icon icon_t"></span>
+                    <h1>不是阿宅不看过来</h1>
                 </div>
+                <div class="news-box">
+                </div>
+                <nav aria-label="Page navigation">
+                    <ul class="pagination">
+                        <li>
+                            <a href="#" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                        <li><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li>
+                            <a href="#" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
             </div>
-        </div>
-        <div class="recent-news">
-            <div class="title">
-                <span class="title-icon icon_t"></span>
-                <h1>不是阿宅不看过来</h1>
-            </div>
-            <div class="news-box">
-            </div>
-            <nav aria-label="Page navigation">
-                <ul class="pagination">
-                    <li>
-                        <a href="#" aria-label="Previous">
-                            <span aria-hidden="true">&laquo;</span>
-                        </a>
-                    </li>
-                    <li><a href="#">1</a></li>
-                    <li><a href="#">2</a></li>
-                    <li><a href="#">3</a></li>
-                    <li><a href="#">4</a></li>
-                    <li><a href="#">5</a></li>
-                    <li>
-                        <a href="#" aria-label="Next">
-                            <span aria-hidden="true">&raquo;</span>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
         </div>
     </div>
     <div id="live2d-box">
-        <iframe src="https://konosubaz.github.io/live2d/index.html" width="50%" height="300px" style="z-index: 0!important;" frameborder="0"
-                scrolling="no" name="headFrame"></iframe>
+        <div class="waifu" id="waifu">
+            <div class="waifu-tips" style="opacity: 1;"></div>
+            <canvas id="live2d" width="280" height="250" class="live2d"></canvas>
+            <div class="waifu-tool">
+                <span class="fui-home"></span>
+                <span class="fui-chat"></span>
+                <span class="fui-eye"></span>
+                <span class="fui-user"></span>
+                <span class="fui-photo"></span>
+                <span class="fui-info-circle"></span>
+                <span class="fui-cross"></span>
+            </div>
+        </div>
+        <script src="live2d/assets/live2d.js"></script>
+        <script src="live2d/assets/waifu-tips.js"></script>
+        <script type="text/javascript">initModel()</script>
     </div>
     <foot class="footer"></foot>
     <script>
-        $('.footer').load('public/index/foot/index.html',function(responseTxt,statusTxt,xhr){
+        $('.footer').load('public/index/foot/index.html', function (responseTxt, statusTxt, xhr) {
             console.log('responseTxt,statusTxt,xhr')
         })
     </script>
@@ -135,7 +219,7 @@
 <script>
     $(window).scroll(function () {
         var scrolled = $(this).scrollTop();
-        $('.image').css('top', (0 + (scrolled * .75)) + 'px');
+        $('#topimg').css('top', (0 + (scrolled * .6)) + 'px');
     });
     document.onkeydown = function (event) {
         var e = event || window.event || arguments.callee.caller.arguments[0];
@@ -149,7 +233,7 @@
         if (e && e.keyCode == 13) { // enter 键
             //要做的事情
         }
-    };
+    }
 </script>
 <script src="js/bootstrap.js"></script>
 <script src="js/swiper.js"></script>
@@ -159,6 +243,7 @@
     var newsData = [];
     var newslist = [];
     animateData();
+
     function animateData() {
         $.ajax({
             //请求方式为get
@@ -185,6 +270,7 @@
             }
         });
     }
+
     // and the result is...
     Array.prototype.shuffle = function () {
         var input = this;
@@ -229,6 +315,7 @@
             }, 500);
         }
     });
+
     function createDiv() {
         var html = [];
         for (var i = 0; i < 8; i++) {
@@ -262,6 +349,7 @@
             row.html(html)
         }
     }
+
     function createNews() {
         for (var n = 0; n < newslist.length; n++) {
             var news = '  <div class="news-item">' +
@@ -294,6 +382,15 @@
             nwebox.html(newsData);
         }
     }
+</script>
+<script type="text/javascript" src="js/jquery.downCount.js"></script>
+<script class="source" type="text/javascript">
+    $('.countdown').downCount({
+        date: '01/25/2020 00:00:00',
+        offset: +10
+    }, function () {
+        alert('倒计时结束!');
+    });
 </script>
 </body>
 </html>

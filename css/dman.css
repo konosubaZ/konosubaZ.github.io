@@ -48,40 +48,21 @@ html {
 /*-------zero-preview----------*/
 
 #bg {
+    width: 100%;
     font-family: mFont;
-    /*http://gf.ppgame.com/CKFinderJava/1/files/033.jpg*/
-    /*background-image: url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1564512131219&di=5d824364ab5a9f84971b6c3410c58801&imgtype=0&src=http%3A%2F%2Fi0.hdslb.com%2Fbfs%2Farticle%2Fb0fdb8c99e90edaa85edaa84349909c472501c45.png);*/
-    /*background-image: url("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1573935603469&di=c53a269e8cf0e7fbbd66529bf12414ce&imgtype=0&src=http%3A%2F%2Fpic1.win4000.com%2Fwallpaper%2F2018-11-13%2F5bea75b424a58.jpg");*/
-    /*background-image: url("https://images5.alphacoders.com/694/thumb-1920-694669.jpg");*/
-    /*background-repeat: no-repeat;*/
-    /*background-position: center;*/
-    /*background-attachment: fixed;*/
-    /*background-size: 100% 100%;*/
-}
-
-#bg:before {
-    content: ' ';
-    position: fixed;
-    z-index: -1;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background: url(../fonts/bg3.jpg) center no-repeat;
-    background-size: cover;
-    transform: rotateY(180deg);
-}
-
-@media screen and (max-width: 768px) {
-    #bg {
-        background-size: cover !important;
-    }
 }
 
 #box {
+    width: 100%;
+    height: 100%;
+    background: white;
     position: relative;
+}
+
+.space {
     max-width: 1160px;
     margin: 0 auto;
+    z-index: 999999;
 }
 
 .no-padding {
@@ -266,37 +247,534 @@ a.navbar-brand {
 }
 
 /*-------------nav---------*/
-/*-------------topimg---------*/
-.topimg {
-    position: relative;
-    width: 100%;
-    height: 320px;
-    margin: 0 auto;
-    /*background-image: url("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1564679035480&di=95d2e5b3d06f1615d5d86cb0041ec267&imgtype=0&src=http%3A%2F%2Fi0.hdslb.com%2Fbfs%2Farticle%2F255ed6552e0f35ed327efa1fba3d7d7583136cdd.jpg");*/
-    overflow: hidden;
-    background: transparent;
-}
+/*----------bolang-----------*/
 
-.topimg .image {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    /*pointer-events: none;*/
-}
-
-.topimg .image img {
-    width: 100%;
-    height: 320px;
-}
-
-@media screen and (max-width: 768px) {
-    .topimg {
-        display: none;
+@keyframes move_wave {
+    0% {
+        transform: translateX(0) translateZ(0) scaleY(1)
+    }
+    50% {
+        transform: translateX(-25%) translateZ(0) scaleY(0.55)
+    }
+    100% {
+        transform: translateX(-50%) translateZ(0) scaleY(1)
     }
 }
 
-/*-------------topimg---------*/
+.bolang .waveWrapper {
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+}
+
+.bolang .waveWrapperInner {
+    position: absolute;
+    width: 100%;
+    overflow: hidden;
+    height: 100%;
+    bottom: -1px;
+}
+
+.bolang .bgTop {
+    z-index: 15;
+    opacity: 0.5;
+}
+
+.bolang .bgMiddle {
+    z-index: 10;
+    opacity: 0.75;
+}
+
+.bolang .bgBottom {
+    z-index: 5;
+}
+
+.bolang .wave {
+    position: absolute;
+    left: 0;
+    width: 200%;
+    height: 100%;
+    background-repeat: repeat no-repeat;
+    background-position: 0 bottom;
+    transform-origin: center bottom;
+}
+
+.bolang .waveTop {
+    background-size: 50% 100px;
+}
+
+.bolang .waveAnimation .waveTop {
+    animation: move-wave 3s;
+    -webkit-animation: move-wave 3s;
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
+}
+
+.bolang .waveMiddle {
+    background-size: 50% 120px;
+}
+
+.bolang .waveAnimation .waveMiddle {
+    animation: move_wave 10s linear infinite;
+}
+
+.bolang .waveBottom {
+    background-size: 50% 100px;
+}
+
+.bolang .waveAnimation .waveBottom {
+    animation: move_wave 15s linear infinite;
+}
+
+/*----------bolang-----------*/
+
+/*!*-------------topimg---------*!*/
+#topimg {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    /*http://www.005.tv/uploads/allimg/170216/1516255O9-5.jpg*/
+    /*https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1576511877&di=861b84ab3223e6cb2c96bfa2031831d3&imgtype=jpg&er=1&src=http%3A%2F%2Fi0.hdslb.com%2Fbfs%2Farticle%2Fc99be791b7fe6e39eb20b1a163299552a2416ac1.png*/
+    /*background-image: url("https://pic.superbed.cn/item/5d7a5294451253d178923eab.jpg");*/
+    /*background-image: url("https://s1.jiligame.com/images/2019/11/25/EJ-QTA6VAAAGWug.jpg");*/
+    /*http://www.005.tv/uploads/allimg/170303/21015234a-5.jpg*/
+    /*http://www.005.tv/uploads/allimg/190418/65-1Z41QJ322962.jpg*/
+    background-image: url(../fonts/newanimate/MOSHED-2019-12-21-1-19-16.jpg);
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: center 0;
+}
+
+#topimg .topimg-info {
+    position: absolute;
+    width: 600px;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    /*box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);*/
+    border-radius: 30px;
+}
+
+/*.time-countdown {*/
+/*    width: 100%;*/
+/*}*/
+
+/*.time-countdown ul.countdown {*/
+/*    list-style: none;*/
+/*    padding: 0;*/
+/*    display: block;*/
+/*    text-align: center;*/
+/*    margin-bottom: 5rem;*/
+/*}*/
+
+/*.time-countdown ul.countdown li {*/
+/*    display: inline-block;*/
+/*}*/
+
+/*.time-countdown ul.countdown li span {*/
+/*    display: inline-block;*/
+/*    width: 13rem;*/
+/*    font-size: 80px;*/
+/*    font-weight: 300;*/
+/*    line-height: 80px;*/
+/*    color: white;*/
+/*}*/
+
+/*.time-countdown ul.countdown li.seperator {*/
+/*    font-size: 80px;*/
+/*    line-height: 70px;*/
+/*    vertical-align: top;*/
+/*    color: white;*/
+/*}*/
+
+/*.time-countdown ul.countdown li p {*/
+/*    color: white;*/
+/*    font-size: 14px;*/
+/*}*/
+
+
+#topimg .ctaBox {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    display: inline-block;
+    border-radius: 100px;
+    overflow: hidden;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+}
+
+.ctaBox .cta {
+    height: 5rem;
+    cursor: pointer;
+    display: block;
+    padding: 0.5em 1.5em 0.5em 1.5em;
+    font-family: "Raleway";
+    color: white;
+    text-decoration: none;
+    font-size: 2.5rem;
+    overflow: hidden;
+    backface-visibility: hidden;
+    position: relative;
+    line-height: 2.5rem;
+}
+
+.linkbox {
+    position: relative;
+    width: 100%;
+    min-height: 12rem;
+    /*background: rgba(255, 204, 255, 0.3);*/
+    border-radius: 1rem;
+    transition: .6s all ease;
+    margin-bottom: 5rem;
+}
+
+.linkbox > a {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: inline-block;
+    width: 12rem;
+    height: 12rem;
+    border-radius: 50%;
+    background-image: url(http://img0.imgtn.bdimg.com/it/u=1862600021,2750465603&fm=11&gp=0.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    box-shadow: 0 0 10px lightskyblue;
+}
+
+@media screen and (max-width: 768px) {
+    .ctaBox .cta {
+        height: 4rem;
+        font-size: 2rem;
+        line-height: 2rem;
+    }
+}
+
+
+.btn-text-parent {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.wrap_text {
+    display: inline-block;
+}
+
+.buildin-btn-text {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 9;
+    width: 100%;
+    transform: translateY(100%);
+}
+
+.buildin-btn-text .btn-letter {
+    opacity: 0;
+}
+
+.btn-letter {
+    display: inline-block;
+    margin: 0em 0.05em;
+    position: relative;
+    transition: transform 300ms, opacity 300ms ease;
+}
+
+.current-btn-text .btn-letter:nth-child(1) {
+    transition-delay: 39ms;
+}
+
+.current-btn-text .btn-letter:nth-child(2) {
+    transition-delay: 99ms;
+}
+
+.current-btn-text .btn-letter:nth-child(3) {
+    transition-delay: 149ms;
+}
+
+.current-btn-text .btn-letter:nth-child(4) {
+    transition-delay: 199ms;
+}
+
+.current-btn-text .btn-letter:nth-child(5) {
+    transition-delay: 249ms;
+}
+
+.current-btn-text .btn-letter:nth-child(6) {
+    transition-delay: 299ms;
+}
+
+.current-btn-text .btn-letter:nth-child(7) {
+    transition-delay: 349ms;
+}
+
+.current-btn-text .btn-letter:nth-child(8) {
+    transition-delay: 399ms;
+}
+
+.current-btn-text .btn-letter:nth-child(9) {
+    transition-delay: 449ms;
+}
+
+.current-btn-text .btn-letter:nth-child(10) {
+    transition-delay: 499ms;
+}
+
+.current-btn-text .btn-letter:nth-child(11) {
+    transition-delay: 549ms;
+}
+
+.current-btn-text .btn-letter:nth-child(12) {
+    transition-delay: 599ms;
+}
+
+.current-btn-text .btn-letter:nth-child(13) {
+    transition-delay: 649ms;
+}
+
+.current-btn-text .btn-letter:nth-child(14) {
+    transition-delay: 699ms;
+}
+
+.current-btn-text .btn-letter:nth-child(15) {
+    transition-delay: 749ms;
+}
+
+.current-btn-text .btn-letter:nth-child(16) {
+    transition-delay: 799ms;
+}
+
+.current-btn-text .btn-letter:nth-child(17) {
+    transition-delay: 849ms;
+}
+
+.current-btn-text .btn-letter:nth-child(18) {
+    transition-delay: 899ms;
+}
+
+.current-btn-text .btn-letter:nth-child(19) {
+    transition-delay: 949ms;
+}
+
+.current-btn-text .btn-letter:nth-child(20) {
+    transition-delay: 999ms;
+}
+
+.current-btn-text .btn-letter:nth-child(21) {
+    transition-delay: 1049ms;
+}
+
+.current-btn-text .btn-letter:nth-child(22) {
+    transition-delay: 1099ms;
+}
+
+.current-btn-text .btn-letter:nth-child(23) {
+    transition-delay: 1149ms;
+}
+
+.current-btn-text .btn-letter:nth-child(24) {
+    transition-delay: 1199ms;
+}
+
+.current-btn-text .btn-letter:nth-child(25) {
+    transition-delay: 1249ms;
+}
+
+.current-btn-text .btn-letter:nth-child(26) {
+    transition-delay: 1299ms;
+}
+
+.current-btn-text .btn-letter:nth-child(27) {
+    transition-delay: 1349ms;
+}
+
+.current-btn-text .btn-letter:nth-child(28) {
+    transition-delay: 1399ms;
+}
+
+.current-btn-text .btn-letter:nth-child(29) {
+    transition-delay: 1449ms;
+}
+
+.current-btn-text .btn-letter:nth-child(30) {
+    transition-delay: 1499ms;
+}
+
+.buildin-btn-text .btn-letter:nth-child(1) {
+    opacity: 0;
+    transition-delay: 49ms;
+}
+
+.buildin-btn-text .btn-letter:nth-child(2) {
+    opacity: 0;
+    transition-delay: 99ms;
+}
+
+.buildin-btn-text .btn-letter:nth-child(3) {
+    opacity: 0;
+    transition-delay: 149ms;
+}
+
+.buildin-btn-text .btn-letter:nth-child(4) {
+    opacity: 0;
+    transition-delay: 199ms;
+}
+
+.buildin-btn-text .btn-letter:nth-child(5) {
+    opacity: 0;
+    transition-delay: 249ms;
+}
+
+.buildin-btn-text .btn-letter:nth-child(6) {
+    opacity: 0;
+    transition-delay: 299ms;
+}
+
+.buildin-btn-text .btn-letter:nth-child(7) {
+    opacity: 0;
+    transition-delay: 349ms;
+}
+
+.buildin-btn-text .btn-letter:nth-child(8) {
+    opacity: 0;
+    transition-delay: 399ms;
+}
+
+.buildin-btn-text .btn-letter:nth-child(9) {
+    opacity: 0;
+    transition-delay: 449ms;
+}
+
+.buildin-btn-text .btn-letter:nth-child(10) {
+    opacity: 0;
+    transition-delay: 499ms;
+}
+
+.buildin-btn-text .btn-letter:nth-child(11) {
+    opacity: 0;
+    transition-delay: 549ms;
+}
+
+.buildin-btn-text .btn-letter:nth-child(12) {
+    opacity: 0;
+    transition-delay: 599ms;
+}
+
+.buildin-btn-text .btn-letter:nth-child(13) {
+    opacity: 0;
+    transition-delay: 649ms;
+}
+
+.buildin-btn-text .btn-letter:nth-child(14) {
+    opacity: 0;
+    transition-delay: 699ms;
+}
+
+.buildin-btn-text .btn-letter:nth-child(15) {
+    opacity: 0;
+    transition-delay: 749ms;
+}
+
+.buildin-btn-text .btn-letter:nth-child(16) {
+    opacity: 0;
+    transition-delay: 799ms;
+}
+
+.buildin-btn-text .btn-letter:nth-child(17) {
+    opacity: 0;
+    transition-delay: 849ms;
+}
+
+.buildin-btn-text .btn-letter:nth-child(18) {
+    opacity: 0;
+    transition-delay: 899ms;
+}
+
+.buildin-btn-text .btn-letter:nth-child(19) {
+    opacity: 0;
+    transition-delay: 949ms;
+}
+
+.buildin-btn-text .btn-letter:nth-child(20) {
+    opacity: 0;
+    transition-delay: 999ms;
+}
+
+.buildin-btn-text .btn-letter:nth-child(21) {
+    opacity: 0;
+    transition-delay: 1049ms;
+}
+
+.buildin-btn-text .btn-letter:nth-child(22) {
+    opacity: 0;
+    transition-delay: 1099ms;
+}
+
+.buildin-btn-text .btn-letter:nth-child(23) {
+    opacity: 0;
+    transition-delay: 1149ms;
+}
+
+.buildin-btn-text .btn-letter:nth-child(24) {
+    opacity: 0;
+    transition-delay: 1199ms;
+}
+
+.buildin-btn-text .btn-letter:nth-child(25) {
+    opacity: 0;
+    transition-delay: 1249ms;
+}
+
+.buildin-btn-text .btn-letter:nth-child(26) {
+    opacity: 0;
+    transition-delay: 1299ms;
+}
+
+.buildin-btn-text .btn-letter:nth-child(27) {
+    opacity: 0;
+    transition-delay: 1349ms;
+}
+
+.buildin-btn-text .btn-letter:nth-child(28) {
+    opacity: 0;
+    transition-delay: 1399ms;
+}
+
+.buildin-btn-text .btn-letter:nth-child(29) {
+    opacity: 0;
+    transition-delay: 1449ms;
+}
+
+.buildin-btn-text .btn-letter:nth-child(30) {
+    opacity: 0;
+    transition-delay: 1499ms;
+}
+
+#topimg .cta:hover .current-btn-text .btn-letter {
+    opacity: 0;
+    transform: translateY(-100%);
+}
+
+#topimg .cta:hover .buildin-btn-text .btn-letter {
+    opacity: 1;
+    transform: translateY(-100%);
+}
+
+/*#topimg .akuya:hover {*/
+/*    transform: rotate(360deg);*/
+/*}*/
+
+/*!*-------------topimg---------*!*/
 /*-------------banner---------*/
 .banner {
     width: 100%;
@@ -531,10 +1009,12 @@ a.navbar-brand {
     overflow: hidden;
     font-size: 12px;
 }
-.animate-recommend .title .exchange span{
+
+.animate-recommend .title .exchange span {
     margin-top: 2px;
     color: white;
- }
+}
+
 .animate-recommend .title .exchange span.xuanz {
     transform: rotate(360deg);
     transform-origin: 50% 50%;
@@ -629,6 +1109,16 @@ a.navbar-brand {
     margin: 0 0 0 5px;
 }
 
+.advert {
+    width: 100%;
+    height: 10rem;
+    background-image: url("https://i0.hdslb.com/bfs/sycp/creative_img/201912/23bbffca4cd4bc80d38986ac7b1c2398.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 40px;
+}
+
 .recent-news nav {
     text-align: center !important;
 }
@@ -708,14 +1198,17 @@ a.navbar-brand {
 
 /*----------live2d----------------*/
 #live2d-box {
-    width: 100%;
-    z-index: 9999999 !important;
-}
-
-iframe {
     position: fixed;
     bottom: 0;
     left: 0;
+    height: 280px;
+    width: 250px;
+    z-index: 999;
+}
+
+iframe {
+    width: 100%;
+
 }
 
 /*----------live2d----------------*/
