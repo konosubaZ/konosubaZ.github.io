@@ -57,6 +57,7 @@ html {
     height: 100%;
     background: white;
     position: relative;
+    padding-top: 15px;
 }
 
 .space {
@@ -247,7 +248,7 @@ a.navbar-brand {
 }
 
 /*-------------nav---------*/
-/*----------bolang-----------*/
+/*----------wavebox-----------*/
 
 @keyframes move_wave {
     0% {
@@ -260,18 +261,20 @@ a.navbar-brand {
         transform: translateX(-50%) translateZ(0) scaleY(1)
     }
 }
-
-.bolang .waveWrapper {
+.wavebox{
+    width: 100%;
+    height: auto;
+}
+.wavebox .waveWrapper {
     overflow: hidden;
     position: absolute;
     left: 0;
     right: 0;
     bottom: 0;
-    top: 0;
-    margin: auto;
+    height: 150px;
 }
 
-.bolang .waveWrapperInner {
+.wavebox .waveWrapperInner {
     position: absolute;
     width: 100%;
     overflow: hidden;
@@ -279,21 +282,21 @@ a.navbar-brand {
     bottom: -1px;
 }
 
-.bolang .bgTop {
+.wavebox .bgTop {
     z-index: 15;
     opacity: 0.5;
 }
 
-.bolang .bgMiddle {
+.wavebox .bgMiddle {
     z-index: 10;
     opacity: 0.75;
 }
 
-.bolang .bgBottom {
+.wavebox .bgBottom {
     z-index: 5;
 }
 
-.bolang .wave {
+.wavebox .wave {
     position: absolute;
     left: 0;
     width: 200%;
@@ -303,34 +306,39 @@ a.navbar-brand {
     transform-origin: center bottom;
 }
 
-.bolang .waveTop {
+.wavebox .waveTop {
     background-size: 50% 100px;
 }
 
-.bolang .waveAnimation .waveTop {
+.wavebox .waveAnimation .waveTop {
     animation: move-wave 3s;
     -webkit-animation: move-wave 3s;
     -webkit-animation-delay: 1s;
     animation-delay: 1s;
 }
 
-.bolang .waveMiddle {
+.wavebox .waveMiddle {
     background-size: 50% 120px;
 }
 
-.bolang .waveAnimation .waveMiddle {
+.wavebox .waveAnimation .waveMiddle {
     animation: move_wave 10s linear infinite;
 }
 
-.bolang .waveBottom {
+.wavebox .waveBottom {
     background-size: 50% 100px;
 }
 
-.bolang .waveAnimation .waveBottom {
+.wavebox .waveAnimation .waveBottom {
     animation: move_wave 15s linear infinite;
 }
+@media screen and (max-width: 768px) {
+    .wavebox .wave {
+        width: 600%;
+    }
+}
 
-/*----------bolang-----------*/
+/*----------wavebox-----------*/
 
 /*!*-------------topimg---------*!*/
 #topimg {
@@ -452,6 +460,9 @@ a.navbar-brand {
 }
 
 @media screen and (max-width: 768px) {
+    #topimg{
+        height: 100vh;
+    }
     .ctaBox .cta {
         height: 4rem;
         font-size: 2rem;
@@ -825,12 +836,6 @@ a.navbar-brand {
     transition: .3s all ease;
 }
 
-@media screen and (max-width: 768px) {
-    .banner {
-        margin-top: 50px;
-    }
-}
-
 /*-------------banner---------*/
 /*------------recent-news-------*/
 .recent-news {
@@ -1000,19 +1005,18 @@ a.navbar-brand {
 .animate-recommend .title .exchange {
     display: inline-block;
     cursor: pointer;
-    color: white;
-    height: 22px;
     text-align: right;
     float: right;
-    padding: 0 5px;
+    padding: 0 8px;
     border-radius: 5px;
     overflow: hidden;
     font-size: 12px;
 }
 
 .animate-recommend .title .exchange span {
-    margin-top: 2px;
-    color: white;
+    display: inline-block;
+    color: #000000;
+    line-height: 22px;
 }
 
 .animate-recommend .title .exchange span.xuanz {
@@ -1212,7 +1216,21 @@ iframe {
 }
 
 /*----------live2d----------------*/
+/*------------cd-top-------------*/
+.cd-top{
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    width: 150px;
+    height: 150px;
+    display: inline-block;
+    background-image: url("../fonts/Top3.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
 
+}
+/*------------cd-top-------------*/
 /*---------------foot---------------*/
 #foot {
     width: 100%;

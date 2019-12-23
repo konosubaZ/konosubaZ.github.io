@@ -15,9 +15,6 @@
     <link rel="stylesheet" href="css/dman.css">
     <link rel="stylesheet" type="text/css" href="live2d/assets/waifu.css"/>
     <script src="js/jquery.js"></script>
-    <style>
-
-    </style>
 </head>
 <body id="bg">
 <div id="home">
@@ -27,19 +24,6 @@
         </div>
     </div>
     <nav class="navbar navbar-default navbar-fixed-top"></nav>
-    <div class="bolang">
-        <div class="waveWrapper waveAnimation">
-            <div class="waveWrapperInner bgTop">
-                <div class="wave waveTop" style="background-image: url('http://demo.sc.chinaz.net/Files/DownLoad/webjs1/201708/jiaoben5332/img/wave-top.png')"></div>
-            </div>
-            <div class="waveWrapperInner bgMiddle">
-                <div class="wave waveMiddle" style="background-image: url('http://demo.sc.chinaz.net/Files/DownLoad/webjs1/201708/jiaoben5332/img/wave-mid.png')"></div>
-            </div>
-            <div class="waveWrapperInner bgBottom">
-                <div class="wave waveBottom" style="background-image: url('http://demo.sc.chinaz.net/Files/DownLoad/webjs1/201708/jiaoben5332/img/wave-bot.png')"></div>
-            </div>
-        </div>
-    </div>
     <div id="topimg">
         <div class="topimg-info">
 
@@ -101,6 +85,19 @@
 
         window.onLoad = createBtnsMarkup();
     </script>
+    <div class="wavebox">
+        <div class="waveWrapper waveAnimation">
+            <div class="waveWrapperInner bgTop">
+                <div class="wave waveTop" style="background-image: url('fonts/wave/wave-top.png')"></div>
+            </div>
+            <div class="waveWrapperInner bgMiddle">
+                <div class="wave waveMiddle" style="background-image: url('fonts/wave/wave-mid.png')"></div>
+            </div>
+            <div class="waveWrapperInner bgBottom">
+                <div class="wave waveBottom" style="background-image: url('fonts/wave/wave-bot.png')"></div>
+            </div>
+        </div>
+    </div>
     <div id="box">
         <div class="space">
             <div class="banner">
@@ -207,6 +204,7 @@
         <script src="live2d/assets/waifu-tips.js"></script>
         <script type="text/javascript">initModel()</script>
     </div>
+    <a href="javascript:;" class="cd-top"></a>
     <foot class="footer"></foot>
     <script>
         $('.footer').load('public/index/foot/index.html', function (responseTxt, statusTxt, xhr) {
