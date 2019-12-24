@@ -78,5 +78,11 @@ $(document).ready(function () {
         });
     })
 
+    $('.news-box').on('mouseenter', '.news-item', function () {
+        $(this).find('img').css('transform', 'scale(1.2)');
+    });
+    $('.news-box').on('mouseleave', '.news-item', function () {
+        $(this).find('img').css('transform', 'scale(1)');
+    })
 });
 

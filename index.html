@@ -28,25 +28,25 @@
         <div class="topimg-info">
 
             <!--以下是春节倒计时代码-->
-<!--                    <div class="time-countdown">-->
-<!--                        <ul class="countdown">-->
-<!--                            <li> <span class="days">00</span>-->
-<!--                                <p class="days_ref">days</p>-->
-<!--                            </li>-->
-<!--                            <li class="seperator">.</li>-->
-<!--                            <li> <span class="hours">00</span>-->
-<!--                                <p class="hours_ref">hours</p>-->
-<!--                            </li>-->
-<!--                            <li class="seperator">:</li>-->
-<!--                            <li> <span class="minutes">00</span>-->
-<!--                                <p class="minutes_ref">minutes</p>-->
-<!--                            </li>-->
-<!--                            <li class="seperator">:</li>-->
-<!--                            <li> <span class="seconds">00</span>-->
-<!--                                <p class="seconds_ref">seconds</p>-->
-<!--                            </li>-->
-<!--                        </ul>-->
-<!--                    </div>-->
+            <!--                    <div class="time-countdown">-->
+            <!--                        <ul class="countdown">-->
+            <!--                            <li> <span class="days">00</span>-->
+            <!--                                <p class="days_ref">days</p>-->
+            <!--                            </li>-->
+            <!--                            <li class="seperator">.</li>-->
+            <!--                            <li> <span class="hours">00</span>-->
+            <!--                                <p class="hours_ref">hours</p>-->
+            <!--                            </li>-->
+            <!--                            <li class="seperator">:</li>-->
+            <!--                            <li> <span class="minutes">00</span>-->
+            <!--                                <p class="minutes_ref">minutes</p>-->
+            <!--                            </li>-->
+            <!--                            <li class="seperator">:</li>-->
+            <!--                            <li> <span class="seconds">00</span>-->
+            <!--                                <p class="seconds_ref">seconds</p>-->
+            <!--                            </li>-->
+            <!--                        </ul>-->
+            <!--                    </div>-->
             <div class="linkbox">
                 <a href="javascript:;"></a>
             </div>
@@ -75,9 +75,7 @@
 			`);
 
                 for (let i = 0; i < $splitText.length; i++) {
-                    $t.
-                    find(".wrap_text").
-                    append(`<span class="btn-letter">${$splitText[i]}</span>`);
+                    $t.find(".wrap_text").append(`<span class="btn-letter">${$splitText[i]}</span>`);
                 }
             });
         };
@@ -162,27 +160,13 @@
                     <span class="title-icon icon_t"></span>
                     <h1>不是阿宅不看过来</h1>
                 </div>
-                <div class="news-box">
+                    <div class="news-box">
                 </div>
-                <nav aria-label="Page navigation">
-                    <ul class="pagination">
-                        <li>
-                            <a href="#" aria-label="Previous">
-                                <span aria-hidden="true">&laquo;</span>
-                            </a>
-                        </li>
-                        <li><a href="#">1</a></li>
-                        <li><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
-                        <li><a href="#">4</a></li>
-                        <li><a href="#">5</a></li>
-                        <li>
-                            <a href="#" aria-label="Next">
-                                <span aria-hidden="true">&raquo;</span>
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
+            </div>
+            <div class="load-more">
+                <a href="javascript:;">
+                    More
+                </a>
             </div>
         </div>
     </div>
@@ -205,6 +189,39 @@
         <script type="text/javascript">initModel()</script>
     </div>
     <a href="javascript:;" class="cd-top"></a>
+    <script>
+        $(function () {
+            $(window).scroll(function () {
+                //为了保证兼容性，这里取两个值，哪个有值取哪一个
+                //scrollTop就是触发滚轮事件时滚轮的高度
+                var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+                if (scrollTop >= 955) {
+                    $('.cd-top').addClass('cd-top-cut')
+                } else {
+                    $('.cd-top').removeClass('cd-top-cut')
+                }
+            });
+            var timer;
+            $('.cd-top').click(function () {
+                $(this).css(
+                    'transform', 'rotate(-90deg)'
+                );
+                timer = setInterval(function () {
+                    var current = document.documentElement.scrollTop ?    // 取得当前滚动的距离
+                        document.documentElement.scrollTop :
+                        document.body.scrollTop;
+                    if (current === 0) {
+                        clearInterval(timer);  　　// 当滚动距离为0 的时候，要清除这个间隔函数
+                    }
+                    document.documentElement.scrollTop = current - 100    // 形成一个慢慢过渡到0 的过程
+                    document.body.scrollTop = current - 100   // 写两个是为了兼容
+                },16)
+            })
+            window.onmousewheel = function () {
+                clearInterval(timer);  // ======= 这个时候会涉及到上面标注的要注意id的位置，最开始的时候 把他写在了函数体里面，到这里的时候就获取不到了。
+            }
+        })
+    </script>
     <foot class="footer"></foot>
     <script>
         $('.footer').load('public/index/foot/index.html', function (responseTxt, statusTxt, xhr) {
