@@ -1005,17 +1005,16 @@ a.navbar-brand {
 }
 .load-more a{
     display: inline-block;
-    font-size: 20px;
+    font-size: 18px;
     text-decoration: none;
     padding: 6px 35px;
-    box-shadow: 0 0 10px #c0c0c0;
+    box-shadow: 5px 5px 3px #c0c0c0;
     border-radius: 50px;
     color: #b0b0b0;
     transition: .3s all ease;
 }
 .load-more a:hover{
-    color: hotpink;
-    box-shadow: 0 0 10px hotpink;
+    box-shadow: 0 0 3px #c0c0c0;
 }
 /*-----------load-more---------------*/
 /*-------------animate-recommend----------*/
