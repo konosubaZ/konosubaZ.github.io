@@ -66,6 +66,80 @@ html {
     z-index: 999999;
 }
 
+.aside {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    margin-left: 605px !important;
+    width: 60px;
+    -webkit-animation: eleShow .5s ease both;
+    animation: eleShow .5s ease both;
+    transition: .3s all ease;
+    border-radius: 15px;
+    padding-top: 10px;
+    box-shadow: 2px 2px 5px #e7e7e7;
+}
+.aside p{
+    display:inline-block;
+    width: 100%;
+    border-bottom: 1px solid #c0c0c0;
+    font-size: 12px;
+    text-align: center;
+    margin-bottom: 0;
+    padding-bottom: 5px;
+    color: #505050;
+}
+.aside span.top-label {
+    display: inline-block;
+    position: absolute;
+    top: -8px;
+    right: -2px;
+    font-size: 30px;
+    z-index: 999;
+}
+
+.aside .item {
+    position: relative;
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    font-size: 12px;
+    text-align: center;
+    cursor: pointer;
+    transition: .3s all ease;
+    color: #505050;
+}
+
+.aside .item:hover {
+    color: white;
+    background: skyblue;
+}
+
+.aside .goback {
+    width: 100%;
+    height: 35px;
+    border-top: 1px solid #c0c0c0;
+    cursor: pointer;
+}
+
+.aside .goback > span {
+    display: inline-block;
+    width: 100%;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    font-size: 35px;
+    color: #505050;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    transition: .3s all ease;
+}
+
+.aside .goback:hover > span {
+    background: skyblue;
+    color: white;
+}
+
 .no-padding {
     padding: 0 !important;
 }
@@ -261,10 +335,12 @@ a.navbar-brand {
         transform: translateX(-50%) translateZ(0) scaleY(1)
     }
 }
-.wavebox{
+
+.wavebox {
     width: 100%;
     height: auto;
 }
+
 .wavebox .waveWrapper {
     overflow: hidden;
     position: absolute;
@@ -332,6 +408,7 @@ a.navbar-brand {
 .wavebox .waveAnimation .waveBottom {
     animation: move_wave 15s linear infinite;
 }
+
 @media screen and (max-width: 768px) {
     .wavebox .wave {
         width: 600%;
@@ -369,45 +446,6 @@ a.navbar-brand {
     /*box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);*/
     border-radius: 30px;
 }
-
-/*.time-countdown {*/
-/*    width: 100%;*/
-/*}*/
-
-/*.time-countdown ul.countdown {*/
-/*    list-style: none;*/
-/*    padding: 0;*/
-/*    display: block;*/
-/*    text-align: center;*/
-/*    margin-bottom: 5rem;*/
-/*}*/
-
-/*.time-countdown ul.countdown li {*/
-/*    display: inline-block;*/
-/*}*/
-
-/*.time-countdown ul.countdown li span {*/
-/*    display: inline-block;*/
-/*    width: 13rem;*/
-/*    font-size: 80px;*/
-/*    font-weight: 300;*/
-/*    line-height: 80px;*/
-/*    color: white;*/
-/*}*/
-
-/*.time-countdown ul.countdown li.seperator {*/
-/*    font-size: 80px;*/
-/*    line-height: 70px;*/
-/*    vertical-align: top;*/
-/*    color: white;*/
-/*}*/
-
-/*.time-countdown ul.countdown li p {*/
-/*    color: white;*/
-/*    font-size: 14px;*/
-/*}*/
-
-
 #topimg .ctaBox {
     position: relative;
     left: 50%;
@@ -432,37 +470,16 @@ a.navbar-brand {
     position: relative;
     line-height: 2.5rem;
 }
-
-.linkbox {
-    position: relative;
+#topimg .header-info{
     width: 100%;
-    min-height: 12rem;
-    /*background: rgba(255, 204, 255, 0.3);*/
-    border-radius: 1rem;
-    transition: .6s all ease;
-    margin-bottom: 5rem;
+    height: 200px;
+    padding-top: 50px;
 }
-
-.linkbox > a {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    display: inline-block;
-    width: 12rem;
-    height: 12rem;
-    border-radius: 50%;
-    background-image: url(http://img0.imgtn.bdimg.com/it/u=1862600021,2750465603&fm=11&gp=0.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    overflow: hidden;
-    box-shadow: 0 0 10px lightskyblue;
-}
-
 @media screen and (max-width: 768px) {
-    #topimg{
+    #topimg {
         height: 100vh;
     }
+
     .ctaBox .cta {
         height: 4rem;
         font-size: 2rem;
@@ -998,12 +1015,13 @@ a.navbar-brand {
 
 /*------------recent-news-------*/
 /*-----------load-more---------------*/
-.load-more{
+.load-more {
     width: 100%;
     text-align: center;
     margin: 50px 0 60px;
 }
-.load-more a{
+
+.load-more a {
     display: inline-block;
     font-size: 18px;
     text-decoration: none;
@@ -1013,9 +1031,11 @@ a.navbar-brand {
     color: #b0b0b0;
     transition: .3s all ease;
 }
-.load-more a:hover{
+
+.load-more a:hover {
     box-shadow: 0 0 3px #c0c0c0;
 }
+
 /*-----------load-more---------------*/
 /*-------------animate-recommend----------*/
 .animate-recommend {
@@ -1239,7 +1259,7 @@ iframe {
 
 /*----------live2d----------------*/
 /*------------cd-top-------------*/
-.cd-top{
+.cd-top {
     position: fixed;
     right: 50px;
     bottom: 50px;
@@ -1253,10 +1273,12 @@ iframe {
     opacity: 0;
     transition: .3s all ease;
 }
-.cd-top-cut{
-    opacity: 1!important;
+
+.cd-top-cut {
+    opacity: 1 !important;
     transition: .3s all ease;
 }
+
 /*------------cd-top-------------*/
 /*---------------foot---------------*/
 #foot {

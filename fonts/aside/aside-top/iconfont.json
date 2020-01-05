@@ -1,0 +1,23 @@
+{
+  "id": "1597361",
+  "name": "konosuba",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "586765",
+      "name": "arrow-top-dot",
+      "font_class": "arrowtopdot",
+      "unicode": "e6b0",
+      "unicode_decimal": 59056
+    },
+    {
+      "icon_id": "2529632",
+      "name": "置顶推荐top",
+      "font_class": "star",
+      "unicode": "e604",
+      "unicode_decimal": 58884
+    }
+  ]
+}

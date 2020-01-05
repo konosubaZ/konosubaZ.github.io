@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="css/swiper.css">
     <link rel="stylesheet" href="css/dman.css">
     <link rel="stylesheet" type="text/css" href="live2d/assets/waifu.css"/>
+    <link rel="stylesheet" href="fonts/aside/aside-top/iconfont.css">
     <script src="js/jquery.js"></script>
 </head>
 <body id="bg">
@@ -26,32 +27,10 @@
     <nav class="navbar navbar-default navbar-fixed-top"></nav>
     <div id="topimg">
         <div class="topimg-info">
-
-            <!--以下是春节倒计时代码-->
-            <!--                    <div class="time-countdown">-->
-            <!--                        <ul class="countdown">-->
-            <!--                            <li> <span class="days">00</span>-->
-            <!--                                <p class="days_ref">days</p>-->
-            <!--                            </li>-->
-            <!--                            <li class="seperator">.</li>-->
-            <!--                            <li> <span class="hours">00</span>-->
-            <!--                                <p class="hours_ref">hours</p>-->
-            <!--                            </li>-->
-            <!--                            <li class="seperator">:</li>-->
-            <!--                            <li> <span class="minutes">00</span>-->
-            <!--                                <p class="minutes_ref">minutes</p>-->
-            <!--                            </li>-->
-            <!--                            <li class="seperator">:</li>-->
-            <!--                            <li> <span class="seconds">00</span>-->
-            <!--                                <p class="seconds_ref">seconds</p>-->
-            <!--                            </li>-->
-            <!--                        </ul>-->
-            <!--                    </div>-->
-            <div class="linkbox">
-                <a href="javascript:;"></a>
-            </div>
             <div class="ctaBox">
                 <a class="cta">この素晴らしい世界に祝福を！</a>
+            </div>
+            <div class="header-info">
             </div>
         </div>
     </div>
@@ -169,6 +148,61 @@
                 </a>
             </div>
         </div>
+        <div class="aside">
+            <span class="iconfont icon-star top-label"></span>
+            <p>热玩榜</p>
+            <div class="aside-box">
+                <div class="item">
+                    明日方舟
+                </div>
+                <div class="item">
+                    月圆之夜
+                </div>
+                <div class="item">
+                    战双
+                </div>
+                <div class="item">
+                    崩坏3rd
+                </div>
+                <div class="item">
+                    阴阳师
+                </div>
+                <div class="item">
+                    碧蓝航线
+                </div>
+                <div class="item">
+                    FG0
+                </div>
+                <div class="item">
+                    双生视界
+                </div>
+                <div class="item">
+                    机动战队
+                </div>
+                <div class="item">
+                    少女前线
+                </div>
+            </div>
+            <div class="goback">
+                <span class="iconfont icon-arrowtopdot"></span>
+            </div>
+        </div>
+        <script>
+            $(window).scroll(function(){
+                var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+                if(scrollTop >= 969){
+                    $('.aside').css({
+                        'position':'fixed',
+                        'top':'80px'
+                    })
+                }else{
+                    $('.aside').css({
+                        'position':'absolute',
+                        'top':'20px'
+                    })
+                }
+            })
+        </script>
     </div>
     <div id="live2d-box">
         <div class="waifu" id="waifu">
@@ -188,40 +222,6 @@
         <script src="live2d/assets/waifu-tips.js"></script>
         <script type="text/javascript">initModel()</script>
     </div>
-    <a href="javascript:;" class="cd-top"></a>
-    <script>
-        $(function () {
-            $(window).scroll(function () {
-                //为了保证兼容性，这里取两个值，哪个有值取哪一个
-                //scrollTop就是触发滚轮事件时滚轮的高度
-                var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-                if (scrollTop >= 955) {
-                    $('.cd-top').addClass('cd-top-cut')
-                } else {
-                    $('.cd-top').removeClass('cd-top-cut')
-                }
-            });
-            var timer;
-            $('.cd-top').click(function () {
-                $(this).css(
-                    'transform', 'rotate(-90deg)'
-                );
-                timer = setInterval(function () {
-                    var current = document.documentElement.scrollTop ?    // 取得当前滚动的距离
-                        document.documentElement.scrollTop :
-                        document.body.scrollTop;
-                    if (current === 0) {
-                        clearInterval(timer);  　　// 当滚动距离为0 的时候，要清除这个间隔函数
-                    }
-                    document.documentElement.scrollTop = current - 100    // 形成一个慢慢过渡到0 的过程
-                    document.body.scrollTop = current - 100   // 写两个是为了兼容
-                },16)
-            })
-            window.onmousewheel = function () {
-                clearInterval(timer);  // ======= 这个时候会涉及到上面标注的要注意id的位置，最开始的时候 把他写在了函数体里面，到这里的时候就获取不到了。
-            }
-        })
-    </script>
     <foot class="footer"></foot>
     <script>
         $('.footer').load('public/index/foot/index.html', function (responseTxt, statusTxt, xhr) {
@@ -397,15 +397,6 @@
             nwebox.html(newsData);
         }
     }
-</script>
-<script type="text/javascript" src="js/jquery.downCount.js"></script>
-<script class="source" type="text/javascript">
-    $('.countdown').downCount({
-        date: '01/25/2020 00:00:00',
-        offset: +10
-    }, function () {
-        alert('倒计时结束!');
-    });
 </script>
 </body>
 </html>
